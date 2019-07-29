@@ -1,0 +1,52 @@
+# This is Git's per-user configuration file.
+[user]
+	email = gcoakley@datarecognitioncorp.com
+	name = Glen Coakley
+
+[alias]
+	add = add -A
+	br = branch
+	co = commit
+	fe = submodule foreach
+	sup = "!clear;for i in $(git remote);do git remote -vv|grep \"^$i\";echo;done;index=1;for i in $(git for-each-ref --format=\"%(refname)\");do branch_name=$(sed \"s|^refs/[^/]*/||\" <<<$i);[[ $i == refs/remotes* ]]&&echo $branch_name \\(remote\\)||echo $branch_name \\> $(git config branch.$branch_name.remote);column -ts \"|\" <<<\"$(git log -3 --pretty=format:\"%C(yellow)%h|%Cred%ad|%Cblue%an|%Cgreen%d %Creset%s\" --date=short $i|cut -c 1-200)\";echo;((index+=1));done;git status;echo"
+	st = status
+	serve = !git daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+	
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+
+[push]
+	default = simple
+
+[core]
+	safecrlf = true
+
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[url "https://"]
+	insteadOf = git://
+
+#[url "https://github.com/"]
+#	insteadOf = ssh://git@github.com:
+#[url "https://"]
+#	insteadOf = ssh://
+
+[credential]

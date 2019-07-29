@@ -1,0 +1,7 @@
+gac/dot-files/.bash_history
+gac/dot-files/.sh_history
+gac/dot-files/.*history
+gac/dot-files/.lesshst
+gac/dot-files/.viminfo
+gac/dot-files/.aws/cli/
+temp/
