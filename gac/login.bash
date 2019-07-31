@@ -20,7 +20,7 @@ machine_name_cfg=_$(hostname).bash
 
 $GAC_CFG_DIR/ssh-agent-start.sh &
 declare -a config_files=(
-	shell-options.bash variables.sh function.bash aliases.sh 
+	shell-options.bash variables.sh functions.bash aliases.sh 
 	my-prompt.bash direnv.sh
 	swdev/git.bash swdev/nodejs.bash swdev/nvm.bash work/drc.bash
 	$os_name_cfg $machine_name_cfg )

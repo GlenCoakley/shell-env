@@ -1,5 +1,6 @@
 
-function ts() { cdToIfExists $WKSP/ts/$1 && goto_pkg_json; }
+export WKSP=~/dev/drc/wksp
+function ws() { cdToIfExists $WKSP/$1 && goto_pkg_json; }
 
 alias wiat="wksp grails/iat/iatapp"
 alias wiats="wksp grails/iat-spare/iatapp"

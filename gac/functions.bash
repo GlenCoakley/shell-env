@@ -16,3 +16,8 @@ function cdToIfExists() {
   return 1;
 }
 
+function env-find () {
+   cd ~/.config/gac
+   ack $@
+}
+

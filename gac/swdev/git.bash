@@ -17,6 +17,6 @@ alias gcl='git clone'
 alias gco='git commit'
 alias gd='git diff'
 alias gs='git status'
-alias gp='git pull'
+alias gp='git pull --prune'
 alias gti=git
 
