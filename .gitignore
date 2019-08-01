@@ -3,5 +3,11 @@ gac/dot-files/.sh_history
 gac/dot-files/.*history
 gac/dot-files/.lesshst
 gac/dot-files/.viminfo
-gac/dot-files/.aws/cli/
+gac/dot-files/.aws/credentials
+gac/dot-files/.ssh/*id_rsa
+gac/dot-files/.ssh/*.pem
 temp/
+
+**/*id_rsa
+**/*.pem
+
