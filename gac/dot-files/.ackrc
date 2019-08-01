@@ -371,6 +371,9 @@
 # http://www.tcl.tk/
 --type-add=tcl:ext:tcl,itcl,itk
 
+# Typescript
+--type-add=ts:ext:ts
+
 # LaTeX
 # http://www.latex-project.org/
 --type-add=tex:ext:tex,cls,sty

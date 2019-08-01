@@ -187,8 +187,10 @@ Procfile    text
 *.woff2 binary
 
 ## EXECUTABLES
-*.exe binary
-*.pyc binary
+**/*.bat binary
+**/*.cmd binary
+**/*.exe binary
+**/*.pyc binary
 
 # This will cause git to leave any script end-of-line characters untouched.
 **/bin/*    binary

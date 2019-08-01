@@ -18,12 +18,11 @@ git_branch () {
   git_branch=""
 
   #if [ "$(git rev-parse --is-inside-work-tree)" = "true" ]; then
-  if [[ $PWD =~ /c/dev/wksp/ ]]; then
+  if [[ $PWD =~ /wksp/ ]]; then
 
     # Based on: https://github.com/jimeh/git-aware-prompt/blob/master/prompt.sh
-    local branch
     branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-    if [ $? ]; then
+    if [ $? ] && [ -n "$branch" ]; then
       if [ "$branch" == "HEAD" ]; then
         branch='detached'
       fi

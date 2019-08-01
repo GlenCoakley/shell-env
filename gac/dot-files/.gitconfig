@@ -38,6 +38,7 @@
 
 [core]
 	safecrlf = true
+	autocrlf = input
 
 [url "https://github.com/"]
 	insteadOf = git@github.com:

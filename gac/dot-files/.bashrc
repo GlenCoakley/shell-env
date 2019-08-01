@@ -45,7 +45,7 @@
 # set -o ignoreeof
 #
 # Use case-insensitive filename globbing
-shopt -s nocaseglob
+# shopt -s nocaseglob
 #
 # Make bash append rather than overwrite the history on disk
 # shopt -s histappend
@@ -88,7 +88,7 @@ export HISTIGNORE=$'&:[fb]g:exit'
 # Whenever displaying the prompt, write the previous line to disk
 # export PROMPT_COMMAND="history -a"
 
-shopt -s nocasematch  # Ignore case in shell matching expressions.
+# shopt -s nocasematch  # Ignore case in shell matching expressions.
 
 GREP_OPTIONS="--color=auto"
 HISTSIZE=2500
