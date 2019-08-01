@@ -4,7 +4,7 @@ source ${GAC_CFG_DIR}/git-completion.bash
 #------------------------------
 # Functions
 #------------------------------
-function gacp () { git add . ; git commit -m "$@"; git push; }
+function gacp () { cd $GAC_CFG_DIR; ./scripts/copy-dot-files-here.sh; git add . ; git commit -m "$@"; git push; }
 
 #------------------------------
 # Aliases
