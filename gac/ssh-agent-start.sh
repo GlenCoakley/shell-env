@@ -3,7 +3,7 @@ env=~/.ssh/agent.env
 
 agent_load_env () { 
     test -f "$env" && source "$env" >| /dev/null ;
-    env | \grep SSH_
+#    env | \grep SSH_
 }
 
 agent_start () {

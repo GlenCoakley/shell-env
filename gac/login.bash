@@ -19,13 +19,17 @@ os_name_cfg=_$(uname | sed -e 's/-[0-9].*//').bash
 machine_name_cfg=_$(hostname).bash
 
 $GAC_CFG_DIR/ssh-agent-start.sh &
+echo -n "Sourcing: "
 declare -a config_files=(
 	shell-options.bash variables.sh functions.bash aliases.sh 
 	my-prompt.bash direnv.sh
 	swdev/git.bash swdev/nodejs.bash swdev/nvm.bash work/drc.bash
 	$os_name_cfg $machine_name_cfg )
 for cf in ${config_files[@]}; do 
-   [ -r $GAC_CFG_DIR/$cf ] && echo_do source $GAC_CFG_DIR/$cf
+   if [ -r $GAC_CFG_DIR/$cf ]; then
+      echo -n "$cf, "
+      source $GAC_CFG_DIR/$cf
+   fi
 done
 unset os_name_cfg machine_name_cfg
 
