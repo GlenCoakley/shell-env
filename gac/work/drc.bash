@@ -2,6 +2,8 @@
 export WKSP=~/dev/drc/wksp
 function ws() { cdToIfExists $WKSP/$1 && goto_pkg_json; }
 
+alias sls='./node_modules/.bin/serverless --stage dev --region us-east-1'
+
 alias wiat="wksp grails/iat/iatapp"
 alias wiats="wksp grails/iat-spare/iatapp"
 
@@ -22,5 +24,4 @@ alias wlf="ws lrc/form-rec-svc"
 alias wlfr="ws lrc/form-rec-svc"
 alias wlfu="ws lrc/form-rec-util"
 alias wludb="ws lrc/udb-svc"
-
 
