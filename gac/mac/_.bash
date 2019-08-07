@@ -4,8 +4,8 @@ source $GAC_CFG_DIR/swdev/aws.mac.bash
 #-----------------------------
 # Functions
 #-----------------------------
-function bci() { brew cask install $@ && brew cask list $GAC_CFG_DIR/work/brew.casks.txt; }
-function bi() { brew install $@ && brew list $GAC_CFG_DIR/work/brew.taps.txt; }
+function bci() { brew cask install $@ && brew cask list > $GAC_CFG_DIR/work/brew.casks.txt; }
+function bi() { brew install $@ && brew list > $GAC_CFG_DIR/work/brew.taps.txt; }
 
 #-----------------------------
 # Aliases
