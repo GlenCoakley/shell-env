@@ -8,6 +8,7 @@ cairo
 cmake
 dos2unix
 fontconfig
+freetds
 freetype
 fribidi
 gcc
@@ -50,7 +51,11 @@ libunistring
 libusb
 libxml2
 libxmlsec1
+libyaml
 little-cms2
+lua
+lua@5.1
+luarocks
 lzo
 meson
 mpfr
@@ -71,9 +76,12 @@ pinentry
 pixman
 pkg-config
 python
+python@2
 readline
 sqlite
 unbound
+unixodbc
 webp
 wget
 xz
+yamllint

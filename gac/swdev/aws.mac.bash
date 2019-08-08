@@ -1,7 +1,7 @@
 
 function aws-role() {
    OUTDIR=~
-   assume-role drcdev | tee $OUTDIR/assumed-role.out && \
+   assume-role -duration 43200s drcdev | tee $OUTDIR/assumed-role.out && \
       source $OUTDIR/assumed-role.out && \
       echo "Saved and sourced $OUTDIR/assumed-role.out"
 }

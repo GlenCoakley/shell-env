@@ -11,6 +11,7 @@ function bi() { brew install $@ && brew list > $GAC_CFG_DIR/work/brew.taps.txt; 
 # Aliases
 #-----------------------------
 alias bs='brew search'
+alias bsi=mac-brew-search-and-info.sh
 
 #-----------------------------
 # Other configuration files
