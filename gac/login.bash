@@ -35,4 +35,5 @@ for cf in ${config_files[@]}; do
    fi
 done
 unset os_name_cfg machine_name_cfg
+echo ''
 
