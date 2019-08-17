@@ -45,9 +45,14 @@
 [url "https://"]
 	insteadOf = git://
 
-#[url "https://github.com/"]
-#	insteadOf = ssh://git@github.com:
-#[url "https://"]
-#	insteadOf = ssh://
+[url "https://github.com/"]
+	insteadOf = ssh://git@github.com:
+[url "https://"]
+	insteadOf = ssh://
+
+[url "https://github.com/"]
+	insteadOf = git+ssh://git@github.com:
+[url "https://"]
+	insteadOf = ssh://
 
 [credential]

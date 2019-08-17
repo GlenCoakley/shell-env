@@ -4,6 +4,7 @@ assume-role
 autoconf
 automake
 awscli
+base64
 cairo
 cmake
 dos2unix
@@ -55,7 +56,6 @@ libyaml
 little-cms2
 lua
 lua@5.1
-luarocks
 lzo
 meson
 mpfr

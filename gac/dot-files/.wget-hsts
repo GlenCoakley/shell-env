@@ -2,5 +2,5 @@
 # Edit at your own risk.
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
 raw.githubusercontent.com	0	0	1562974095	31536000
-github.com	0	1	1562974095	31536000
-codeload.github.com	0	0	1562858884	31536000
+github.com	0	1	1565376507	31536000
+codeload.github.com	0	0	1565357487	31536000

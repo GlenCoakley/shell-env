@@ -36,5 +36,4 @@ echo ''
 
 DE_HOOK="`direnv hook $0` "
 eval "$DE_HOOK"
-echo ''
 
