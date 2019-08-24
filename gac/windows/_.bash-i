@@ -1,0 +1,21 @@
+
+#-----------------------------
+# Shell Options 
+#-----------------------------
+# Complete .exe executables with their short name.
+shopt -s completion_strip_exe
+
+#-----------------------------
+# Functions
+#-----------------------------
+function npp() { /c/dev/bin/Notepad++/notepad++.exe $@ & }
+function winmerge() { /c/Progra~2/tools/WinMerge/WinMergeU.exe $@ & }
+function win() { PATH=/c/windows/system32:$PATH $@ ; }
+
+#-----------------------------
+# Aliases
+#-----------------------------
+alias 7z='/c/Progra~1/7-Zip/7z'
+alias choc-installed="choco list --local-only | sort" # or: cinst -l | sort
+alias choc-upgrade='choco upgrade chocolatey'
+

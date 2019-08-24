@@ -1,8 +1,9 @@
-export NVM_DIR="$HOME/.nvm"
-[ -s "/Users/glencoakley/opt/nvm/nvm.sh" ] && . "/Users/glencoakley/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/Users/glencoakley/opt/nvm/etc/bash_completion" ] && . "/Users/glencoakley/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
-find-up () {
+export NVM_DIR="$HOME/dev/bin/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+find_up () {
     path=$(pwd)
     while [[ "$path" != "" && ! -e "$path/$1" ]]; do
         path=${path%/*}
@@ -10,9 +11,9 @@ find-up () {
     echo "$path"
 }
 
-cdnvm(){
+cd_nvm(){
     cd "$@";
-    nvm_path=$(find-up .nvmrc | tr -d '[:space:]')
+    nvm_path=$(find_up .nvmrc | tr -d '[:space:]')
 
     # If there are no .nvmrc file, use the default nvm version
     if [[ ! $nvm_path = *[^[:space:]]* ]]; then
@@ -52,5 +53,5 @@ cdnvm(){
         fi
     fi
 }
-alias cd='cdnvm'
+alias cd='cd_nvm'
 

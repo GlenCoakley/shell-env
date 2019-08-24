@@ -1,14 +1,14 @@
 configstore
-gac/dot-files/.bash_history
-gac/dot-files/.sh_history
-gac/dot-files/.*history
-gac/dot-files/.lesshst
-gac/dot-files/.viminfo
 gac/dot-files/.aws/credentials
 gac/dot-files/.ssh/*
-karabiner/automatic_backups/
+gac/dot-files/.*history
+gac/dot-files/.lesshst
+gac/dot-files/.rnd
+gac/dot-files/.serverauth*
+gac/dot-files/.viminfo
+karabiner/automatic_backups
 node_modules
-temp/
+temp
 
 **/*id_rsa
 **/*.pem
