@@ -54,3 +54,5 @@ cdnvm(){
 }
 alias cd='cdnvm'
 
+nvm alias default lts/carbon
+
