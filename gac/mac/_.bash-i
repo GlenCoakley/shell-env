@@ -1,11 +1,13 @@
 
-source $GAC_CFG_DIR/swdev/aws.mac.bash
+source_all swdev/aws.mac.bash
 
 #-----------------------------
 # Functions
 #-----------------------------
-function bci() { brew cask install $@ && brew cask list > $GAC_CFG_DIR/work/brew.casks.txt; }
-function bi() { brew install $@ && brew list > $GAC_CFG_DIR/work/brew.taps.txt; }
+function bci() { brew cask install   $@ && brew cask list > $GAC_CFG_DIR/work/brew.casks.txt; }
+function bcu() { brew cask uninstall $@ && brew cask list > $GAC_CFG_DIR/work/brew.casks.txt; }
+function bi()  { brew install   $@ && brew list > $GAC_CFG_DIR/work/brew.taps.txt; }
+function bu()  { brew uninstall $@ && brew list > $GAC_CFG_DIR/work/brew.taps.txt; }
 
 #-----------------------------
 # Aliases

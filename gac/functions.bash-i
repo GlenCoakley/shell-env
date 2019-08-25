@@ -1,7 +1,4 @@
 
-function mcd() { mkdir -p $@; cd $@; }
-function which() { type -a $1 | sed -e "s/^$1 is //g"; }    # where, of a sort
-
 function cdToIfExists() { 
   if [ -n "$1" ]; then
     if [ -d $1 ]; then cd $1; return 0; 
@@ -16,7 +13,10 @@ function cdToIfExists() {
   return 1;
 }
 
-function env-find () {
-   (cd ~/.config/gac; ack $@)
-}
+function env-find () { cd ~/.config/gac; ack $@; }
+function exe() 	{ chmod -R ugo+x $@; }
+function lt() 	{ ll -t $@ | head -`tput lines`; }
+function lrt() 	{ ll -rt $@ | tail -`tput lines`; }
+function mcd() 	{ mkdir -p $@; cd $@; }
+function which() { type -a $1 | sed -e "s/^$1 is //g"; }    # where, of a sort
 

@@ -1,0 +1,5 @@
+
+# For MacOSX using Homebrew's gettext.
+msgcat='/usr/local/opt/gettext/bin/msgcat'
+msgfmt='/usr/local/opt/gettext/bin/msgfmt'
+

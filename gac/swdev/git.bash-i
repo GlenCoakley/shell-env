@@ -1,5 +1,5 @@
 
-source ${GAC_CFG_DIR}/git-completion.bash
+source $GAC_CFG_DIR/swdev/git-completion.bash-internal
 
 #------------------------------
 # Functions

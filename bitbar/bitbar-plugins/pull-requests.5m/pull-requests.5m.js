@@ -1,4 +1,5 @@
-#!/Users/glencoakley/.nvm/versions/node/v6.17.1/bin/node
+#!$NVM_DIR/versions/node/v6.17.1/bin/node
+// #!/Users/glencoakley/.nvm/versions/node/v6.17.1/bin/node
 // #!/usr/bin/env node
 // jshint esversion: 6, asi: true
 

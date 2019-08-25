@@ -1,39 +1,30 @@
-#    Add something like the following to your .bashrc file to use this environment.
-# # Tell this environment configuration where to find its files.
+# # Tell this environment where to find its files.
 # export GAC_CFG_DIR=~/.config/gac
-# # Execute the configuration.
-# source $GAC_CFG_DIR/login.bash
 #
-#    Optionally, include a work-specific file.
-# source $GAC_CFG_DIR/work/drc.bash
+# # Execute this configuration from your shell login script (.bash_profile, etc).
+# source $GAC_CFG_DIR/login.bash
+
+[ -z "$GAC_CFG_DIR" ] && echo 'Must set GAC_CFG_DIR before sourcing this script.'
 
 export GAC_DEV_DIR=$HOME/dev
-export GAC_DEV_INST_DIRS=$GAC_DEV_DIR/installed
 
-export PATH=$GAC_DEV_DIR/scripts:$GAC_DEV_DIR/bin:~/scripts:~/bin:${PATH}
+export PATH=$GAC_DEV_DIR/scripts:$GAC_DEV_DIR/bin:~/scripts:~/bin:${PATH}:~/scripts/special-purpose
 export LD_LIBRARY_PATH=${GAC_DEV_DIR}/lib:$HOME/lib:$LD_LIBRARY_PATH
+export MANPATH=$HOME/dev/man:$MANPATH
 
+GAC_OS_ABBR=$(uname | sed -e 's/-[0-9].*//').bash
+GAC_MACHINE_ABBR=$(hostname).bash
+GAC_NOW_INTERACTIVE=no
 
-$GAC_CFG_DIR/ssh-agent-start.sh &
-
-os_name_cfg=_$(uname | sed -e 's/-[0-9].*//').bash
-machine_name_cfg=_$(hostname).bash
-declare -a config_files=(
-	shell-options.bash variables.sh functions.bash aliases.sh my-prompt.bash 
-	swdev/git.bash swdev/nodejs.bash swdev/nvm.bash swdev/npm-completion.bash 
-	work/drc.bash $os_name_cfg $machine_name_cfg 
-	)
-
-echo -n "Shell is sourcing: "
-for cf in ${config_files[@]}; do 
-   if [ -r $GAC_CFG_DIR/$cf ]; then
-      echo -n "$cf, "
-      source $GAC_CFG_DIR/$cf
-   fi
-done
-unset os_name_cfg machine_name_cfg
+cd $GAC_CFG_DIR
+source ./source_all
+echo -n "Login "
+source_all shell-options.bash variables.bash swdev/nodejs.bash
+source_optional os-name/${GAC_OS_ABBR}
+source_optional machine/${GAC_MACHINE_ABBR}
 echo ''
 
-DE_HOOK="`direnv hook $0` "
-eval "$DE_HOOK"
+GAC_NOW_INTERACTIVE=yes
+[ -t 0 ] && source $GAC_CFG_DIR/interactive.bash
+cd ~
 

@@ -1,0 +1,31 @@
+
+function source_by_mode_or_default() {
+  [ "$GAC_NOW_INTERACTIVE" == "no" ] && ext="-l"
+  [ "$GAC_NOW_INTERACTIVE" == "yes" ] && ext="-i"
+  local optional=$1
+  local file=$2
+  local filepath=$GAC_CFG_DIR/$file
+
+  if [ -s $filepath$ext ]; then
+    echo -n "$file, "
+    source $filepath$ext
+  else
+    if [ -s $filepath ]; then echo -n "$file, "; fi
+    if [ "$optional" == "no" ]; then source $filepath; fi
+  fi
+}
+
+function source_optional() { source_by_mode_or_default yes $@; }
+function source_required() { source_by_mode_or_default no $@; }
+
+function source_all() {
+  [ -z "$1" ] && echo 'Usage: <file...>'
+
+  if [ -n "$1" ]; then
+    echo -n "sourcing: "
+    for cf in $@; do
+      source_required "$cf"
+    done
+  fi
+}
+
