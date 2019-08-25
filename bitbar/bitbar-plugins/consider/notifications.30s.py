@@ -20,7 +20,7 @@ from itertools import groupby
 github_api_key = os.getenv( 'GITHUB_TOKEN', 'Enter your GitHub.com Personal Access Token here...' )
 
 # GitHub:Enterprise (optional)
-enterprise_api_key = json.loads(os.getenv('HOME') + '/.ssh/drc-gcoakley.secrets.json').githubAccessToken;
+enterprise_api_key = json.loads(os.getenv('HOME') + '/.ssh/drc.secrets.json').githubAccessToken;
 enterprise_api_key = os.getenv( 'GITHUB_ENTERPRISE_TOKEN', 'Enter your GitHub.com Enterprise Access Token here...' )
 enterprise_api_url = os.getenv( 'GITHUB_ENTERPRISE_API', 'https://api.github.com' )
 
