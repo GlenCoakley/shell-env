@@ -55,5 +55,3 @@ cd_nvm(){
 }
 alias cd='cd_nvm'
 
-nvm alias default lts/carbon
-

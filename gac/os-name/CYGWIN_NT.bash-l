@@ -1,1 +1,4 @@
-source_optional windows/_.bash-l
+
+# Cygwin's check for is interactive terminal:
+# [[ "$-" == *i* ]] && source_optional windows/_.bash-l
+

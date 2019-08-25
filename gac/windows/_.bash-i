@@ -4,6 +4,7 @@
 #-----------------------------
 # Complete .exe executables with their short name.
 shopt -s completion_strip_exe
+# shopt -s nocasematch  # Ignore case in shell matching expressions.
 
 #-----------------------------
 # Functions

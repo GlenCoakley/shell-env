@@ -22,6 +22,8 @@ echo -n "Login "
 source_all shell-options.bash variables.bash swdev/nodejs.bash
 source_optional os-name/${GAC_OS_ABBR}
 source_optional machine/${GAC_MACHINE_ABBR}
+source_optional prompt.bash
+source_optional completion.bash
 echo ''
 
 GAC_NOW_INTERACTIVE=yes
