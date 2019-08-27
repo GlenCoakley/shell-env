@@ -7,11 +7,15 @@ function source_by_mode_or_default() {
   local filepath=$GAC_CFG_DIR/$file
 
   if [ -s $filepath$ext ]; then
-    echo -n "$file, "
+    [ "$GAC_DEBUG" -eq 1 ] && echo -n "$file, "
     source $filepath$ext
   else
-    if [ -s $filepath ]; then echo -n "$file, "; fi
-    if [ "$optional" == "no" ]; then source $filepath; fi
+    fileExists=no
+    [ -s $filepath ] && fileExists=yes
+    if [ "$fileExists" == "yes" ] || [ "$optional" == "no" ]; then 
+      [ "$GAC_DEBUG" -eq 1 ] && echo -n "$file, "
+      source $filepath
+    fi
   fi
 }
 
@@ -22,7 +26,7 @@ function source_all() {
   [ -z "$1" ] && echo 'Usage: <file...>'
 
   if [ -n "$1" ]; then
-    echo -n "sourcing: "
+    [ "$GAC_DEBUG" -eq 1 ] && echo -n "sourcing: "
     for cf in $@; do
       source_required "$cf"
     done

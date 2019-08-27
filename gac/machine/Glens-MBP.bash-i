@@ -1,4 +1,0 @@
-source_required swdev/nvm.bash
-
-nvm alias default lts/carbon
-
