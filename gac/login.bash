@@ -13,7 +13,7 @@ export LD_LIBRARY_PATH=${GAC_DEV_DIR}/lib:$HOME/lib:$LD_LIBRARY_PATH
 export MANPATH=$HOME/dev/man:$MANPATH
 
 GAC_OS_ABBR=$(uname | sed -e 's/-[0-9].*//').bash
-GAC_MACHINE_ABBR=$(hostname -s).bash
+GAC_MACHINE_ABBR=$(scutil --get LocalHostName).bash
 GAC_NOW_INTERACTIVE=no
 
 cd $GAC_CFG_DIR
