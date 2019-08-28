@@ -1,0 +1,9 @@
+[github_ci]
+access_token=bc7bf1df319466d752f14a16ebb8a411b2979d48 # Personal Access Token
+username=drc-gcoakley
+repos[]=datarecognitioncorp/eca-form-recognition-service
+repos[]=datarecognitioncorp/eca-form-recognition-utilities
+repos[]=datarecognitioncorp/eca-local-scanning-web-api
+repos[]=datarecognitioncorp/eca-local-scanning-web-ui
+repos[]=datarecognitioncorp/eca-local-scanning-udb-service
+
