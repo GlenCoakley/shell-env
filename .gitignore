@@ -1,6 +1,10 @@
-.idea/
 configstore/
 copyq/
+node_modules/
+temp/
+karabiner/automatic_backups/
+
+.DS_Store
 gac/dot-files/.aws/credentials
 gac/dot-files/.ssh/*
 gac/dot-files/.*history
@@ -8,9 +12,6 @@ gac/dot-files/.lesshst
 gac/dot-files/.rnd
 gac/dot-files/.serverauth*
 gac/dot-files/.viminfo
-karabiner/automatic_backups/
-node_modules/
-temp/
 
 **/*id_rsa
 **/*.pem
