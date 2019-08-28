@@ -13,8 +13,9 @@ function cdToIfExists() {
   return 1;
 }
 
-function env-find () { cd ~/.config/gac; ack $@; }
+function find-in-config () { cd ~/.config/gac; ack $@; }
 function exe() 	{ chmod -R ugo+x $@; }
+function isTerminalAttached() { return test -t 0; }
 function lt() 	{ ll -t $@ | head -`tput lines`; }
 function lrt() 	{ ll -rt $@ | tail -`tput lines`; }
 function mcd() 	{ mkdir -p $@; cd $@; }

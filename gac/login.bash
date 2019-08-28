@@ -13,18 +13,19 @@ export LD_LIBRARY_PATH=${GAC_DEV_DIR}/lib:$HOME/lib:$LD_LIBRARY_PATH
 export MANPATH=$HOME/dev/man:$MANPATH
 
 GAC_OS_ABBR=$(uname | sed -e 's/-[0-9].*//').bash
-GAC_MACHINE_ABBR=$(hostname).bash
+GAC_MACHINE_ABBR=$(hostname -s).bash
 GAC_NOW_INTERACTIVE=no
 
 cd $GAC_CFG_DIR
 source ./source_all
-echo -n "Login "
+GAC_DEBUG=1
+[ "$GAC_DEBUG" -eq 1 ] && echo -n "Login "
 source_all shell-options.bash variables.bash swdev/nodejs.bash
 source_optional os-name/${GAC_OS_ABBR}
 source_optional machine/${GAC_MACHINE_ABBR}
-echo ''
+[ "$GAC_DEBUG" -eq 1 ] && echo ''
 
 GAC_NOW_INTERACTIVE=yes
-[ -t 0 ] && source $GAC_CFG_DIR/interactive.bash
+test -t 0 && source $GAC_CFG_DIR/interactive.bash
 cd ~
 
