@@ -1,5 +1,7 @@
 
+export PATH=~/scripts/drc:$PATH
 export WKSP=~/dev/drc/wksp
+
 function ws() { cdToIfExists $WKSP/$1 && goto_pkg_json; }
 
 alias sls='./node_modules/.bin/serverless --stage dev --region us-east-1'

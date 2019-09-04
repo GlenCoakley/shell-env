@@ -39,7 +39,7 @@ time_now () {
 truncate_path () { 
   maxlen=${1:-70}
   cutoff=$(($maxlen - 3))
-  truncate_path=$(pwd | perl -e '{ $_=<>; $l=length($_); printf("%s%s\n", $l>'$cutoff' ? "...": "", substr($_,0, $l<'$maxlen' ? $l: '$maxlen'));}' )
+  truncate_path=$(pwd | perl -e '{ $_=<>; $l=length($_); printf("%s%s\n", $l>'$cutoff' ? "...": "", substr($_, $l<'$maxlen' ? 0 : $l+3-'$maxlen', $l<'$maxlen' ? $l: '$maxlen'));}' )
   # Below is faster but does not handle paths containing spaces. 
   # truncate_path=$(pwd | awk '{printf("%s%s\n", length($1)>'$cutoff' ? "...": "", substr($1, length($1)-'$maxlen'));}')
 }
