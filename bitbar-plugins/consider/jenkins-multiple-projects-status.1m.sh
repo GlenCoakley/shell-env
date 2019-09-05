@@ -8,8 +8,8 @@
 
 SCHEMA="https"
 BASE_URL="jenkinsci"
-USER="gcokey"
-TOKEN="2019browndog.03" #prefer tokens to passwords (passwords can still be used here), get it from $SCHEMA://$BASE_URL/user/$USER/configure -> Show API Token
+USER=""
+TOKEN="" #prefer tokens to passwords (passwords can still be used here), get it from $SCHEMA://$BASE_URL/user/$USER/configure -> Show API Token
 PROJECTS=("eca-form-recognition-service1" "rtm-service")
 
 function displaytime {

@@ -14,9 +14,12 @@
 const secrets = require(process.env.HOME + '/.ssh/drc.secrets.json');
 const token = secrets.githubAccessToken;
 const username = secrets.githubUserName;
-var repos = [
-'DataRecognitionCorporation/eca-local-scanning-web-api', 
-'DataRecognitionCorporation/eca-local-scanning-web-ui'
+var githubReposURL = 'https://api.github.com/repos/DataRecognitionCorporation/'
+'eca-form-recognition-service', 
+'eca-local-scanning-web-api', 
+'eca-local-scanning-web-ui'
+'eca-form-recognition-utilities', 
+'eca-local-scanning-udb-service'
 ]
 // DO NOT EDIT BELOW THIS POINT
 
@@ -27,7 +30,7 @@ var co = require("co")
 co(function* () {
   var results = yield repos.map(function(repo) { //jshint ignore:line
     var options = {
-      url: 'https://api.github.com/repos/' + repo + '/pulls',
+		url: githubReposURL + repo + '/pulls',
       headers: {
         'User-Agent': username + ' - bitbar'
       },
@@ -42,7 +45,10 @@ co(function* () {
   var totalCount = 0
   var strings = results.reduce( (acc, response) => {
     var info = JSON.parse(response.body)
-    if(info.length > 0) {
+	if (info.message) { 
+		console.error(info.message);
+	}
+	else if (info.length > 0) {
       totalCount += info.length
       acc.push(info[0].base.repo.name + " | color=#0000ff")
       info.forEach(function(pr) {
@@ -52,7 +58,7 @@ co(function* () {
     return acc
   }, ['---'] )
 
-  strings.unshift(`${totalCount} Pull Request`)
+  strings.unshift(`${totalCount} Pull Request${totalCount != 1 ? "s" : ""}`)
   for( var string of strings)
     console.log(string)
 }).catch(function() {});
