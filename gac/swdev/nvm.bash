@@ -4,7 +4,7 @@ export PATH=$PATH:$NVM_DIR/bin
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-find_up () {
+function find_up() {
     path=$(pwd)
     while [[ "$path" != "" && ! -e "$path/$1" ]]; do
         path=${path%/*}
@@ -12,7 +12,7 @@ find_up () {
     echo "$path"
 }
 
-cd_nvm(){
+function cd_nvm() {
     cd "$@";
     nvm_path=$(find_up .nvmrc | tr -d '[:space:]')
 
@@ -54,5 +54,12 @@ cd_nvm(){
         fi
     fi
 }
+
 alias cd='cd_nvm'
+
+# Redefine cdToIfExists() to use cd_nvm() instead of 'cd'.
+TEMPFILE=$(mktemp -t gac.config.swdev)
+type cdToIfExists | sed -e 's/\bcd /cd_nvm /g' | grep -v 'is a function' > $TEMPFILE
+source $TEMPFILE
+rm -f $TEMPFILE
 

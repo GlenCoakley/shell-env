@@ -1,0 +1,3 @@
+alias npm-def-reg-arg='npm --registry https://registry.npmjs.org'
+alias npm-set-def-reg='npm config set registry https://registry.npmjs.org'
+alias npm-set-drc-reg='npm config set registry http://artifactory.datarecognitioncorp.com/artifactory/api/npm/drc_virtualnpm/'

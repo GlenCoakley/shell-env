@@ -1,5 +1,5 @@
 GREP_OPTIONS="--color=auto"
 HISTSIZE=2500
-LESS="-e -x4"
+LESS="-eR -x4"
 PAGER='less -e'
 TMP=/tmp
