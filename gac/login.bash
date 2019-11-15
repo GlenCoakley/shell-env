@@ -16,6 +16,7 @@ GAC_OS_ABBR=$(uname | sed -e 's/-[0-9].*//').bash
 GAC_MACHINE_ABBR=$(scutil --get LocalHostName).bash
 GAC_NOW_INTERACTIVE=no
 
+CWD=`pwd`
 cd $GAC_CFG_DIR
 source ./source_all
 GAC_DEBUG=1
@@ -27,5 +28,5 @@ source_optional machine/${GAC_MACHINE_ABBR}
 
 GAC_NOW_INTERACTIVE=yes
 test -t 0 && source $GAC_CFG_DIR/interactive.bash
-cd ~
+cd "$CWD"
 

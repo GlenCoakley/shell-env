@@ -18,7 +18,9 @@ alias gcl='git clone'
 alias gcm='git commit'
 alias gd='git diff'
 alias gfa='git fetch --all'
+alias gmd='gp && gch $(git-branch) && git merge develop'
 alias gs='git status'
 alias gp='git pull --prune'
 alias gti=git
+alias git-url='git-origin-url'
 

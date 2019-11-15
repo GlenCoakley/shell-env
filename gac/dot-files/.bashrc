@@ -6,10 +6,6 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
-export GAC_CFG_DIR=~/.config/gac
-source $GAC_CFG_DIR/login.bash
-source $GAC_CFG_DIR/work/drc.bash
-
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [ -f /Users/glencoakley/dev/drc/wksp/lrc/form-rec-svc/node_modules/tabtab/.completions/serverless.bash ] && . /Users/glencoakley/dev/drc/wksp/lrc/form-rec-svc/node_modules/tabtab/.completions/serverless.bash

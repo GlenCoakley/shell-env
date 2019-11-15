@@ -4,8 +4,8 @@ export WKSP=~/dev/drc/wksp
 
 function ws() { cdToIfExists $WKSP/$1 && goto_pkg_json; }
 
-alias wiat="wksp grails/iat/iatapp"
-alias wiats="wksp grails/iat-spare/iatapp"
+alias wiat="wksp iat/iatapp"
+alias wiats="wksp iat-spare/iatapp"
 
 alias wrtm="ws rtm"
 alias wrtml="ws rtm/s*v*c*/lib/eca-rtm-model"
