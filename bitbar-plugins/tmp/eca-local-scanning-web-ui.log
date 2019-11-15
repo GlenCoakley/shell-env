@@ -1,0 +1,2 @@
+curl --insecure --silent https://gcoakley:112e876eae0a8ed30879b618f5818c61a8@jenkinsci.datarecognitioncorp.com/job/eca-local-scanning-web-ui/lastBuild/api/json?pretty=true | grep 'result\|timestamp' | head -2
+tmp/eca-local-scanning-web-ui.log

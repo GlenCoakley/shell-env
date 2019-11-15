@@ -15,13 +15,7 @@ const secrets = require(process.env.HOME + '/.ssh/drc.secrets.json');
 const token = secrets.githubAccessToken;
 const username = secrets.githubUserName;
 var githubReposURL = 'https://api.github.com/repos/DataRecognitionCorporation/'
-var repos = [
-'eca-form-recognition-service', 
-'eca-local-scanning-web-api', 
-'eca-local-scanning-web-ui',
-'eca-form-recognition-utilities',
-'eca-local-scanning-udb-service'
-]
+var repos = require('../config/github-projects.json')
 // DO NOT EDIT BELOW THIS POINT
 
 var bluebird = require("bluebird")
