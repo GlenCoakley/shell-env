@@ -39,6 +39,7 @@
 [core]
 	safecrlf = true
 	autocrlf = input
+	safecrlf = warn
 
 #	[url "drc-gcoakley@github.com"]
 #		insteadOf = git@github.com

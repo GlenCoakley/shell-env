@@ -1,13 +1,18 @@
 
+function aws-role-unset() {
+  unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID AWS_SECURITY_TOKEN
+}
+
 function aws-role() {
   ROLE=${1:-drcdev}
   OUTDIR=~
+
+  aws-role-unset
   assume-role -duration 43200s $ROLE > $OUTDIR/assumed-role.out && \
     source $OUTDIR/assumed-role.out && \
     echo "Saved and sourced $OUTDIR/assumed-role.out"
   env | grep ^AWS
 }
 
-alias aws-role-unset='unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID AWS_SECURITY_TOKEN'
 alias unset-aws-role=aws-role-unset
 

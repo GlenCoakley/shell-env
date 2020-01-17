@@ -2,8 +2,8 @@ source_required swdev/nvm.bash
 
 nvm alias default 10
 if [ isTerminalAttached ]; then
-  nvm alias default lts/carbon
+  nvm alias default lts/dubnium
 else
-  nvm alias default lts/carbon > /dev/null
+  nvm alias default lts/dubnium > /dev/null
 fi
 

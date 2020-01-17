@@ -74,6 +74,9 @@ readme       text
 *README*     text
 TODO         text
 
+## IntelliJ IDEA http-client scripts
+*.http       binary
+
 ## TEMPLATES
 *.dot        text
 *.ejs        text

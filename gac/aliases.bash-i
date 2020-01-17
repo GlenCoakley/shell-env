@@ -43,7 +43,6 @@ alias la='ls -A'                    # all but . and ..
 alias ll='ls -l'                    # long list
 alias lla='ls -lA'                  # long list of all but . and ..
 alias lld='ls -lad'                 # long list as directories--don't show directory contents.
-alias lsd='find . -maxdepth 1 -type d'
 
 # Don't set the LESS environment variable as it causes git output to mishandle the terminal. 
 alias more=less
@@ -58,6 +57,5 @@ alias whence='type -a'                        # where, of a sort
 # Accept common typos.
 alias cd..='cd ..'
 
-alias bi='brew install'
 alias bci='brew cask install'
 

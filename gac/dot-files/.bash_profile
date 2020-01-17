@@ -5,6 +5,6 @@ source $GAC_CFG_DIR/work/drc.bash
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/glencoakley/.sdkman"
-[[ -s "/Users/glencoakley/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/glencoakley/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/glencoakley/dev/bin/sdkman"
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
