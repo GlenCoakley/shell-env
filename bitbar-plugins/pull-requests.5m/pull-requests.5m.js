@@ -24,8 +24,8 @@ var co = require("co")
 
 co(function* () {
   var results = yield repos.map(function(repo) { //jshint ignore:line
-    var options = {
-		url: githubReposURL + repo + '/pulls',
+  var options = {
+    url: githubReposURL + repo + '/pulls',
       headers: {
         'User-Agent': username + ' - bitbar'
       },
@@ -37,23 +37,27 @@ co(function* () {
     return request.getAsync(options);
   })
 
-  var totalCount = 0
-  var strings = results.reduce( (acc, response) => {
-    var info = JSON.parse(response.body)
-	if (info.message) { 
-		console.error(info.message);
-	}
-	else if (info.length > 0) {
-      totalCount += info.length
+  var totalCount = 0;
+  var prInfo = results.reduce( (acc, response) => {
+    var info = JSON.parse(response.body);
+    if (info.message) { 
+      // Display error unless there were no pull requests.
+      if (info.message !== 'Not Found') {
+        console.error(info.message);
+      }
+    }
+    else if (info.length > 0) {
+      totalCount += info.length;
       acc.push(info[0].base.repo.name + " | color=#0000ff")
       info.forEach(function(pr) {
-        acc.push("#" + pr.number + " " + pr.title + " (" + pr.user.login + ") | href=" + pr.html_url)
+        acc.push("#" + pr.number + " " + pr.title + " (" + pr.user.login + ") | href=" + pr.html_url);
       })
     }
-    return acc
+    return acc;
   }, ['---'] )
 
-  strings.unshift(`${totalCount} Pull Request${totalCount != 1 ? "s" : ""}`)
-  for( var string of strings)
-    console.log(string)
+  prInfo.unshift(`${totalCount} Pull Request${totalCount != 1 ? "s" : ""}`)
+  for(var aPR of prInfo) {
+    console.log(aPR);
+  }
 }).catch(function() {});

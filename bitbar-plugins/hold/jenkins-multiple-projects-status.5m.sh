@@ -31,31 +31,31 @@ function displaytime {
   echo "${output} ago"
 }
 
-mkdir -p ./tmp
 # beginning of display
-echo "Jenkins Status at $(date +%X)"
+echo "Builds $(date +%X)"
+echo "---"
 echo "---"
 
 for project in "${JOBS[@]}"
 do
   output="${project}: "
-  url="${SCHEMA}://${USER}:${TOKEN}@${BASE_URL}/job/${project// /'%20'}/lastBuild/api/json?pretty=true"
-  query=$(curl --insecure --silent --show-error "${url}" | grep '"result"\|"timestamp"' | head -2)
-  success=$(echo "${query}" | grep '"result"' | awk '{print $3}') # grep the "result" line
-
-  echo "curl --insecure --silent "${url}" | grep '"result"\|"timestamp"' | head -2" > ./tmp/${project// /'%20'}.log
-  echo tmp/${project// /'%20'}.log"$query" >> ./tmp/${project// /'%20'}.log
-
-  if [[ $success == *"SUCCESS"* ]]
-  then
-    output+='🔵 '
-  else
-    output+='🔴 '
+  url="${SCHEMA}://${USER}:${TOKEN}@${BASE_URL}/job/${project// /'%20'}/job/develop/lastBuild/api/json?pretty=true"
+  queryResult=$(curl --insecure --silent --show-error "${url}")
+  notFound=$(echo "${queryResult}" | grep -ic 'Not found')
+  if [ "$notFound" -eq 0 ]; then
+    result=$(echo "${queryResult}" | jq -r '.result')
+    timestamp=$(echo "${queryResult}" | jq -r '.timestamp' | awk '{print $3}')
   fi
 
-  timestamp=$(echo "${query}" | grep "timestamp" | awk '{print $3}') # grep the "timestamp" line
-  timestamp=${timestamp%?} # remove the trailing ','
-  currentTime=$(($(date +'%s * 1000 + %-N / 1000000'))) # generate a timestamp
+  if [[ $result == *SUCCESS* ]]; then
+    output+='🔵'
+  elif [[ $result == *FAILURE* ]]; then
+    output+='🔴'
+  else
+    output+='??'
+  fi
+
+  currentTime=$(($(date +'%s * 1000 + %-N / 1000000'))) # generate a javascript timestamp
   output+=" $(displaytime $(( currentTime - timestamp )))"
   echo "${output}"
 done
