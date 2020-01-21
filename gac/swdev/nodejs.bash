@@ -22,7 +22,7 @@ function goto_pkg_json() {
 }
 
 function nprei() { npm uninstall $@; npm cache clean; npm install $@; }
-function wksp() { cdToIfExists $WKSP/$1 && goto_pkg_json; }
+function wksp() { cdToIfExists $wksp/$1 && goto_pkg_json; }
 
 #----------------------------
 # Aliases

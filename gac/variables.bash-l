@@ -1,5 +1,5 @@
 export GREP_OPTIONS="--color=auto"
 export HISTSIZE=2500
-export LESS="-e- R -x4"
+export LESS="-eMqR -x4"
 export PAGER='less -e'
 export TMP=/tmp

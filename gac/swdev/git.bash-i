@@ -12,6 +12,7 @@ function gacp () { git add . ; git commit -m "$@"; git push; }
 #------------------------------
 alias gb='git branch'
 alias gba='git branch --all'
+alias gbl='git branch --list'
 alias gcd='git checkout develop'
 alias gch='git checkout'
 alias gcl='git clone'
