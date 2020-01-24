@@ -1,4 +1,9 @@
 
+function die() {
+   printf $@
+   exit 1;
+}
+
 function aws-role-unset() {
   unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID AWS_SECURITY_TOKEN
 }
@@ -6,6 +11,8 @@ function aws-role-unset() {
 function aws-role() {
   ROLE=${1:-drcdev}
   OUTDIR=~
+
+  [ -z "$ROLE" ] || die 'Usage: aws-role <role config. name>'
 
   aws-role-unset
   assume-role -duration 43200s $ROLE > $OUTDIR/assumed-role.out && \

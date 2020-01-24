@@ -5,6 +5,7 @@
   "enterpriseDisabled": false,
   "meta": {
     "created_at": 1562789365,
-    "updated_at": null
-  }
+    "updated_at": 1579880664
+  },
+  "tabCompletionPromptDisabled": true
 }

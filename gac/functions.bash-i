@@ -24,7 +24,7 @@ alias find-env=find-in-config
 function isTerminalAttached() { return test -t 0; }
 function lt() 	{ ll -t $@ | head -`tput lines`; }
 function lrt() 	{ ll -rt $@ | tail -`tput lines`; }
-function lsd()  { $DIR=${1:=.}; find $DIR -maxdepth 1 -type d; }
+function lsd()  { DIR=${1:-.}; find $DIR -maxdepth 1 -type d; }
 
 function mcd() 	{ mkdir -p $@; cd $@; }
 function which() { type -a $1 | sed -e "s/^$1 is //g"; }    # where, of a sort
