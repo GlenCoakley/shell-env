@@ -5,8 +5,10 @@ atext
 awareness
 bbedit
 bitbar
+caffeine
 cheatsheet
 chrome-devtools
+clipy
 copyq
 dbeaver-community
 disk-inventory-x

@@ -6,9 +6,11 @@ export PATH=$PATH:$NVM_DIR/bin
 
 function find_up() {
     path=$(pwd)
-    while [[ "$path" != "" && ! -e "$path/$1" ]]; do
-        path=${path%/*}
-    done
+		if [ -r package.json ]; then
+			while [[ "$path" != "" && ! -e "$path/$1" ]]; do
+      	path=${path%/*}
+    	done
+		fi
     echo "$path"
 }
 
@@ -16,7 +18,7 @@ function cd_nvm() {
     cd "$@";
     nvm_path=$(find_up .nvmrc | tr -d '[:space:]')
 
-    # If there are no .nvmrc file, use the default nvm version
+    # If there is no .nvmrc file, use the default nvm version
     if [[ ! $nvm_path = *[^[:space:]]* ]]; then
 
         declare default_version;

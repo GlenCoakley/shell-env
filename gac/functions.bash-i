@@ -17,7 +17,7 @@ function cdToIfExists() {
   return 1;
 }
 
-function exe() 	{ chmod -R ugo+x $@; }
+function exe() 	{ touch $@; chmod -R ugo+x $@; }
 function find-in-config () { pushd ~/.config/gac; ack $@; popd; }
 alias find-env=find-in-config
 

@@ -9,16 +9,17 @@
 # alias cp='cp -i'
 alias mv='mv -i'
 
+alias bci='brew cask install'
 alias cp='\cp -p' 		# Always preserve timestamps
+# curlg ~= 'curl --insecure --location --include --silent --show-error'
+alias curlg='curl --kLisS'
+alias diff='diff -b'
+alias dird=lsd
 
 # Default to human readable figures
 alias df='df -h'
 alias du='du -ch'
 
-# curlg ~= 'curl --insecure --location --include --silent --show-error'
-alias curlg='curl --kLisS'
-alias diff='diff -b'
-alias dird=lsd
 alias ema='echo_do vi $GAC_CFG_DIR/aliases.sh'
 alias emf='echo_do vi $GAC_CFG_DIR/functions.bash'
 alias eml='echo_do vi $GAC_CFG_DIR/login.bash'
@@ -48,6 +49,8 @@ alias lld='ls -lad'                 # long list as directories--don't show direc
 alias more=less
 alias m=less
 alias mroe=less
+alias rc='reset; clear;'
+alias rehash='hash -r'
 alias shell-options='set -o'
 alias show-shell-options='set -o'
 alias tty-reset='reset'
@@ -56,6 +59,4 @@ alias whence='type -a'                        # where, of a sort
 
 # Accept common typos.
 alias cd..='cd ..'
-
-alias bci='brew cask install'
 

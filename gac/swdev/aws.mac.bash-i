@@ -1,6 +1,6 @@
 
 function die() {
-   printf $@
+   echo $@
    exit 1;
 }
 
@@ -12,7 +12,7 @@ function aws-role() {
   ROLE=${1:-drcdev}
   OUTDIR=~
 
-  [ -z "$ROLE" ] || die 'Usage: aws-role <role config. name>'
+#  [ -z "$ROLE" ] || die 'Usage: aws-role <role config. name>'
 
   aws-role-unset
   assume-role -duration 43200s $ROLE > $OUTDIR/assumed-role.out && \
