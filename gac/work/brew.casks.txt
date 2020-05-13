@@ -1,4 +1,3 @@
-adoptopenjdk8
 alfred
 aquamacs
 atext
@@ -12,10 +11,12 @@ clipy
 copyq
 dbeaver-community
 disk-inventory-x
+docker
 dozer
 firefox
 flux
 fuse
+gitkraken
 glimmerblocker
 google-chat
 google-chrome
@@ -44,4 +45,6 @@ textmate
 the-unarchiver
 usage
 vanilla
+virtualbox
 visual-studio-code
+caskroom/versions/adoptopenjdk8

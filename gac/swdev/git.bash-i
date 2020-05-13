@@ -5,6 +5,7 @@ source $GAC_CFG_DIR/swdev/git-completion.bash-internal
 # Functions
 #------------------------------
 function gcp () { cd $GAC_CFG_DIR; 
+  ./scripts/zip-scripts-to-config.sh;
   ./scripts/copy-dot-files-to-config.sh;
   git add . ; git commit -m "$@"; git push;
 }

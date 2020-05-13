@@ -9,7 +9,6 @@
 # alias cp='cp -i'
 alias mv='mv -i'
 
-alias bci='brew cask install'
 alias cp='\cp -p' 		# Always preserve timestamps
 # curlg ~= 'curl --insecure --location --include --silent --show-error'
 alias curlg='curl --kLisS'
