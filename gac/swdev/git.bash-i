@@ -4,16 +4,20 @@ source $GAC_CFG_DIR/swdev/git-completion.bash-internal
 #------------------------------
 # Functions
 #------------------------------
+
+# This could be in a more general place but, it does require git to work. 
 function gcp () { cd $GAC_CFG_DIR; 
   ./scripts/zip-scripts-to-config.sh;
   ./scripts/copy-dot-files-to-config.sh;
-  git add . ; git commit -m "$@"; git push;
+  local msg=${@:-"Checkpoint $(date)"}
+  git add . ; git commit -m "$msg"; git push;
 }
-function gacp () { 
-  git add . ; git commit -m "$@"; git push;
+function gac () { 
+  local msg=${@:-"Checkpoint $(date)"}
+  git add . ; git commit -m "$@"; git status;
 }
-function gmd () { br=$(git-branch); 
-  git stash save gud && git checkout develop && git pull && \
+function gmd () { local br=$(git-branch); 
+  git stash save gmd && git checkout develop && git pull && \
     git checkout $br && git stash pop && git merge develop && unset br
 }
 
