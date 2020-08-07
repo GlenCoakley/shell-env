@@ -1,0 +1,5 @@
+To Do
+
+Quick/small
+* Change GAC_* config. env. vars. to XDG_*. 
+  ref: https://specifications.freedesktop.org/basedir-spec/latest/index.html
