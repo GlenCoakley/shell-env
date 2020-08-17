@@ -376,6 +376,7 @@
 
 # Typescript
 --type-add=ts:ext:ts
+--type-add=typescript:ext:ts
 
 # LaTeX
 # http://www.latex-project.org/

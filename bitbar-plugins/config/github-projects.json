@@ -2,10 +2,11 @@
 "eca-form-recognition-service",
 "eca-local-scanning-web-api",
 "eca-local-scanning-web-ui",
-"eca-form-recognition-utilities",
-"eca-local-scanning-udb-service",
 "eca-lrc-setup-ui",
 "eca-online-scoring-api",
+"eca-online-scoring-ui",
+"eca-form-recognition-utilities",
+"eca-local-scanning-udb-service",
 "eca-lrc-common-service",
 "eca-lrc-common-ui"
 ]

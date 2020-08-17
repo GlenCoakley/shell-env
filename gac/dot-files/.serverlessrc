@@ -5,7 +5,11 @@
   "enterpriseDisabled": false,
   "meta": {
     "created_at": 1562789365,
-    "updated_at": 1579880664
+    "updated_at": 1597437848
   },
-  "tabCompletionPromptDisabled": true
+  "tabCompletionPromptDisabled": true,
+  "shownNotificationsHistory": {
+    "DASHBOARD": 1597413130554,
+    "FULLSTACK_APP": 1597437848493
+  }
 }

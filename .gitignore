@@ -4,7 +4,7 @@ node_modules/
 temp/
 karabiner/automatic_backups/
 
-.DS_Store
+**/.DS_Store
 gac/dot-files/.aws/credentials
 gac/dot-files/.ssh/*
 gac/dot-files/.*history

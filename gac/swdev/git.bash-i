@@ -14,7 +14,7 @@ function gcp () { cd $GAC_CFG_DIR;
 }
 function gac () { 
   local msg=${@:-"Checkpoint $(date)"}
-  git add . ; git commit -m "$@"; git status;
+  git add . ; git commit -m "$msg"; git status;
 }
 function gmd () { local br=$(git-branch); 
   git stash save gmd && git checkout develop && git pull && \
@@ -27,7 +27,8 @@ function gmd () { local br=$(git-branch);
 alias gb='git branch'
 alias gba='git branch --all'
 alias gbl='git branch --list'
-alias gcd='git checkout develop'
+alias gcd='GCR_RETURN=$(git-branch); git checkout develop'
+alias gcr='git checkout $GCR_RETURN'
 alias gch='git checkout'
 alias gcl='git clone'
 alias gcm='git commit'

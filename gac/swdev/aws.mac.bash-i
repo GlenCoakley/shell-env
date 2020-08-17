@@ -9,17 +9,19 @@ function aws-role-unset() {
 }
 
 function aws-role() {
-  ROLE=${1:-drcdev}
   OUTDIR=~
-
+  ROLE=${1:-drcdev}
+	shift
+	
 #  [ -z "$ROLE" ] || die 'Usage: aws-role <role config. name>'
 
   aws-role-unset
-  assume-role -duration 43200s $ROLE > $OUTDIR/assumed-role.out && \
+  assume-role -duration 43200s $ROLE $@ > $OUTDIR/assumed-role.out && \
     source $OUTDIR/assumed-role.out && \
     echo "Saved and sourced $OUTDIR/assumed-role.out"
   env | grep ^AWS
 }
 
+alias aws='\aws --profile AWS-SSO-Developers-177429746880'
 alias unset-aws-role=aws-role-unset
 

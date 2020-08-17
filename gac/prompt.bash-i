@@ -1,5 +1,9 @@
 # This incorporates the functions of: bash-git-prompt.bash
 
+time_now () {
+  time_now=$(date +'%d|%H:%M:%S')
+}
+
 # Create a local definition for speed. (It is also a script: set-shell-title.)
 set_title () {
   [ -x "$1" ] && echo -n '\033]0;'$@'\007'
@@ -32,10 +36,6 @@ git_branch () {
   fi
 }
 
-time_now () {
-  time_now=$(date +'%H:%M.%S')
-}
-
 truncate_path () { 
   maxlen=${1:-70}
   cutoff=$(($maxlen - 3))
@@ -56,5 +56,5 @@ export PS1="\[\033[0;36m\]\${time_now} \[\033[0;0m\]\${git_branch}\[\033[0;32m\]
 
 # Use the shell's 'debug' hook to set the terminal's window title.
 # KEEP THIS LAST to avoid extraneous output in the shell at initial login.
-trap "set_title '$BASH_COMMAND  $$'" debug
+#trap "set_title '$BASH_COMMAND  $$'" debug
 

@@ -1,5 +1,7 @@
 export GREP_OPTIONS="--color=auto"
 export HISTSIZE=2500
-#export LESS="-eMqR -x4"
+# Some setting in this LESS environment variable causes git output to mishandle the terminal.
+# It is not: E
+export LESS="-eMqR -x4"
 export PAGER='less -e'
 export TMP=/tmp
