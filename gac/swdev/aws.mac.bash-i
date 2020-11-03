@@ -4,24 +4,42 @@ function die() {
    exit 1;
 }
 
-function aws-role-unset() {
-  unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID AWS_SECURITY_TOKEN
-}
-
 function aws-role() {
-  OUTDIR=~
-  ROLE=${1:-drcdev}
-	shift
-	
+   OUTFILE=~/.aws/assumed-role.env
+   ROLE=${1:-glentest}
+   shift
 #  [ -z "$ROLE" ] || die 'Usage: aws-role <role config. name>'
 
-  aws-role-unset
-  assume-role -duration 43200s $ROLE $@ > $OUTDIR/assumed-role.out && \
-    source $OUTDIR/assumed-role.out && \
-    echo "Saved and sourced $OUTDIR/assumed-role.out"
-  env | grep ^AWS
+   aws-role-unset
+   assume-role -duration 43200s $ROLE $@ > $OUTFILE && \
+      source $OUTFILE  && \
+      echo "Saved and sourced $OUTFILE"
+   env | grep ^AWS
 }
 
-alias aws='\aws --profile AWS-SSO-Developers-177429746880'
-alias unset-aws-role=aws-role-unset
+function aws-src-env() {
+   CRED_ENV_FILE="$HOME/.aws/credentials.env"
+   source $CRED_ENV_FILE
+}
+
+function aws-set-env() {
+   CRED_ENV_FILE="$HOME/.aws/credentials.env"
+   aws2-wrap --profile 177429746880_AWS-SSO-Developers --export > $CRED_ENV_FILE
+   source $CRED_ENV_FILE
+}
+
+function aws-unset-env() {
+   unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID AWS_SECURITY_TOKEN AWS_REGION
+}
+
+function sls() { serverless $@; }
+function serverless() {
+   aws-set-env
+   ./node_modules/.bin/serverless $@
+}
+
+# Use with: 'aws --profile drcdev sso login' and 'aws sso logout'
+alias awsdev='\aws --profile drcdev sso login ; aws-set-env ;'
+alias awsprod='\aws --profile drcprod sso login ; aws-set-env ;'
+alias awsglen='\aws-role glentest'
 

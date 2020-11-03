@@ -1,4 +1,4 @@
-source_required swdev/nvm.bash-i
+source_required swdev/nvm.bash-i swdev/aws.mac. swdev/aws.mac.bash-i
 
 if [ isTerminalAttached ]; then
   nvm alias default v10

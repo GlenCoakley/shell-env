@@ -1,7 +1,8 @@
 export GREP_OPTIONS="--color=auto"
 export HISTSIZE=2500
 # Some setting in this LESS environment variable causes git output to mishandle the terminal.
-# It is not: E
-export LESS="-eMqR -x4"
+# When using -F, -X will avoid saving and restoring the screen so, that a file of less than 
+# a screens height will just act like it was 'cat'ed to the screen.
+export LESS="-FXMqR -x4"
 export PAGER='less -e'
 export TMP=/tmp

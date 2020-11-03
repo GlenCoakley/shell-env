@@ -9,3 +9,5 @@ if [ "${BASH-no}" != "no" ]; then
 fi
 
 [ -r ~/.bashrc ] && . ~/.bashrc
+
+export PATH="/Users/glencoakley/bin/cargo/bin:$PATH"
