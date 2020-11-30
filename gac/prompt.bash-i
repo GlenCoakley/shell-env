@@ -1,7 +1,7 @@
 # This incorporates the functions of: bash-git-prompt.bash
 
-time_now () {
-  time_now=$(date +'%d|%H:%M:%S')
+datetime_now () {
+  datetime_now=$(date +'%dth %H:%M:%S')
 }
 
 # Create a local definition for speed. (It is also a script: set-shell-title.)
@@ -45,14 +45,14 @@ truncate_path () {
 }
 
 # Default Git enabled prompt with dirty state.
-export PS1="\[\033[0;36m\]\${time_now} \[\033[0;0m\]\${git_branch}\[\033[0;32m\]\${truncate_path}\[\033[0;0m\]\n\$ "
-#export PS1="\[\033[0;36m\]\${time_now} \[\033[0;0m\]\[\033[0;32m\]\${truncate_path}\[\033[0;0m\]\n\$ "
+export PS1="\[\033[0;36m\]\${datetime_now} \[\033[0;0m\]\${git_branch}\[\033[0;32m\]\${truncate_path}\[\033[0;0m\]\n\$ "
+#export PS1="\[\033[0;36m\]\${datetime_now} \[\033[0;0m\]\[\033[0;32m\]\${truncate_path}\[\033[0;0m\]\n\$ "
 
 ### This is may be slow on windows because of the git_branch network request.
 #if [[ ! $PROMPT_COMMAND =~ git_branch ]]; then 
-  export PROMPT_COMMAND="git_branch; time_now; truncate_path 90; set_title '${PWD}  $$'; $PROMPT_COMMAND"
+  export PROMPT_COMMAND="git_branch; datetime_now; truncate_path 90; set_title '${PWD}  $$'; $PROMPT_COMMAND"
 #fi
-# if [[ ! $PROMPT_COMMAND =~ truncate_path ]]; then export PROMPT_COMMAND="time_now; truncate_path 90; $PROMPT_COMMAND"; fi
+# if [[ ! $PROMPT_COMMAND =~ truncate_path ]]; then export PROMPT_COMMAND="datetime_now; truncate_path 90; $PROMPT_COMMAND"; fi
 
 # Use the shell's 'debug' hook to set the terminal's window title.
 # KEEP THIS LAST to avoid extraneous output in the shell at initial login.

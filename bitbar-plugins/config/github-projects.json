@@ -8,5 +8,7 @@
 "eca-form-recognition-utilities",
 "eca-local-scanning-udb-service",
 "eca-lrc-common-service",
-"eca-lrc-common-ui"
+"eca-lrc-common-ui",
+"eca-offline-testing-api",
+"eca-tabe-offline-testing"
 ]

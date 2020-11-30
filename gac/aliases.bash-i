@@ -19,6 +19,7 @@ alias dird=lsd
 alias df='df -h'
 alias du='du -ch'
 
+alias eg='env | sort | grep'
 alias ema='echo_do vi $GAC_CFG_DIR/aliases.sh'
 alias emf='echo_do vi $GAC_CFG_DIR/functions.bash'
 alias eml='echo_do vi $GAC_CFG_DIR/login.bash'

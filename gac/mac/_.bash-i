@@ -1,5 +1,5 @@
 
-source_all swdev/aws.mac.bash
+source_all swdev/aws.bash
 
 #-----------------------------
 # Functions

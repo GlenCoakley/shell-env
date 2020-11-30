@@ -6,11 +6,13 @@ source $GAC_CFG_DIR/swdev/git-completion.bash-internal
 #------------------------------
 
 # This could be in a more general place but, it does require git to work. 
-function gcp () { cd $GAC_CFG_DIR; 
+function gcp () { 
+  cd $GAC_CFG_DIR; 
   ./scripts/zip-scripts-to-config.sh;
   ./scripts/copy-dot-files-to-config.sh;
   local msg=${@:-"Checkpoint $(date)"}
   git add . ; git commit -m "$msg"; git push;
+  cd -
 }
 function gac () { 
   local msg=${@:-"Checkpoint $(date)"}

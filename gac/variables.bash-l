@@ -6,3 +6,24 @@ export HISTSIZE=2500
 export LESS="-FXMqR -x4"
 export PAGER='less -e'
 export TMP=/tmp
+
+# ----------------------------------
+# Shell escape sequence colors. 
+# Example use: echo -e "Take the ${TC_RED}red${TC_NOCOLOR} pill or the ${TC_RESET}blue${TC_RESET}."
+# ----------------------------------
+TC_RESET='\033[0m'
+TC_RED='\033[0;31m'
+TC_GREEN='\033[0;32m'
+TC_ORANGE='\033[0;33m'
+TC_BLUE='\033[0;34m'
+TC_PURPLE='\033[0;35m'
+TC_CYAN='\033[0;36m'
+TC_LIGHTGRAY='\033[0;37m'
+TC_DARKGRAY='\033[1;30m'
+TC_LIGHTRED='\033[1;31m'
+TC_LIGHTGREEN='\033[1;32m'
+TC_YELLOW='\033[1;33m'
+TC_LIGHTBLUE='\033[1;34m'
+TC_LIGHTPURPLE='\033[1;35m'
+TC_LIGHTCYAN='\033[1;36m'
+TC_WHITE='\033[1;37m'

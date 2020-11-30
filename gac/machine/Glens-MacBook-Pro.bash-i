@@ -1,4 +1,4 @@
-source_required swdev/nvm.bash-i swdev/aws.mac. swdev/aws.mac.bash-i
+source_required swdev/nvm.bash-i swdev/aws.bash-i
 
 if [ isTerminalAttached ]; then
   nvm alias default v10
@@ -6,3 +6,4 @@ else
   nvm alias default v10 > /dev/null
 fi
 
+export ECA_USER_ID=81517887-240C-4841-8361-0381A5F4D52C
