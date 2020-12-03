@@ -14,7 +14,7 @@ function cdToIfExists() {
 }
 
 function exe() 	{ touch $@; chmod -R ugo+x $@; }
-function find-in-config () { pushd ~/.config/gac > /dev/null; ack $@; popd > /dev/null; }
+function find-in-config () { pushd ~/.config/gac > /dev/null; ack $@ `pwd`; popd > /dev/null; }
 alias find-env=find-in-config
 alias grep-config=find-in-config
 alias grep-env=find-in-config

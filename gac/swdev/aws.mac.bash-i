@@ -21,12 +21,12 @@ function aws-role() {
 }
 
 function aws-src-env() {
-   CRED_ENV_FILE="$HOME/.aws/credentials.env"
+   CRED_ENV_FILE="$HOME/.aws/current.credentials.env"
    source $CRED_ENV_FILE
 }
 
 function aws-set-env() {
-   CRED_ENV_FILE="$HOME/.aws/credentials.env"
+   CRED_ENV_FILE="$HOME/.aws/current.credentials.env"
    aws2-wrap --profile 177429746880_AWS-SSO-Developers --export > $CRED_ENV_FILE
    source $CRED_ENV_FILE
 }
@@ -35,7 +35,16 @@ function aws-unset-env() {
    unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID AWS_SECURITY_TOKEN AWS_REGION
 }
 
-function sls() { serverless $@; }
+function aws-reset-env() {
+   aws-unset-env;
+   export AWS_ACCESS_KEY_ID=S3RVER
+   export AWS_SECRET_ACCESS_KEY=S3RVER
+}
+
+function sls() {
+   aws-set-env
+   ./node_modules/.bin/serverless $@
+}
 function serverless() {
    aws-set-env
    ./node_modules/.bin/serverless $@
@@ -46,3 +55,4 @@ alias awsdev='\aws --profile drcdev sso login ; aws-set-env ;'
 alias awsprod='\aws --profile drcprod sso login ; aws-set-env ;'
 alias awsglen='\aws-role glentest'
 
+aws-reset-env;
