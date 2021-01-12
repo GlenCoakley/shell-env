@@ -4,10 +4,17 @@ source_all swdev/aws.bash
 #-----------------------------
 # Functions
 #-----------------------------
-function bci() { brew cask install   $@ && brew cask list > $GAC_CFG_DIR/work/brew.casks.txt; }
-function bcu() { brew cask uninstall $@ && brew cask list > $GAC_CFG_DIR/work/brew.casks.txt; }
-function bi()  { brew install   $@ && brew list > $GAC_CFG_DIR/work/brew.taps.txt; }
-function bu()  { brew uninstall $@ && brew list > $GAC_CFG_DIR/work/brew.taps.txt; }
+function brew-create-bundle() { 
+   cd $GAC_CFG_DIR/machine; 
+   HOMEBREW_NO_AUTO_UPDATE=1 brew bundle dump --file ${GAC_MACHINE_ABBR}.Brewfile; 
+   cd - 
+}
+function brew-delayed-update() { HOMEBREW_NO_AUTO_UPDATE=0 brew update; }
+function bci() { HOMEBREW_NO_AUTO_UPDATE=1 brew install --cask $@ && brew-create-bundle; }
+function bcu() { HOMEBREW_NO_AUTO_UPDATE=1 brew uninstall --cask $@ && brew-create-bundle; }
+function bi()  { HOMEBREW_NO_AUTO_UPDATE=1 brew install   $@ && brew-create-bundle; }
+function bu()  { HOMEBREW_NO_AUTO_UPDATE=1 brew uninstall $@ && brew-create-bundle; }
+function bs()  { HOMEBREW_NO_AUTO_UPDATE=1 brew search $@; }
 
 #-----------------------------
 # Aliases
@@ -21,4 +28,3 @@ alias top='top -c cpu'
 #-----------------------------
 # This script needs to be executed, not sourced like most.
 $GAC_CFG_DIR/mac/iterm2_shell_integration.bash
-

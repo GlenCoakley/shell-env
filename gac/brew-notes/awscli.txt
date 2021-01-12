@@ -1,0 +1,147 @@
+$ brew upgrade awscli
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 1 tap (homebrew/cask).
+No changes to formulae.
+
+==> Upgrading 1 outdated package:
+awscli 1.16.210 -> 1.16.310
+==> Upgrading awscli
+==> Installing dependencies for awscli: sqlite and python
+==> Installing awscli dependency: sqlite
+==> Downloading https://homebrew.bintray.com/bottles/sqlite-3.30.1.mojave.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/5e/5e6fef2d754e0e4009d502c40ad1846ac46937886b5f3fe89378cb838626d95e?__gda__=exp=1578346432~hmac=de4f2a31be68f6ac70db9a96db44e60a663d88b8c9
+######################################################################## 100.0%
+==> Pouring sqlite-3.30.1.mojave.bottle.tar.gz
+==> Caveats
+sqlite is keg-only, which means it was not symlinked into /Users/glencoakley,
+because macOS provides an older sqlite3.
+
+If you need to have sqlite first in your PATH run:
+  echo 'export PATH="/Users/glencoakley/opt/sqlite/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find sqlite you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/sqlite/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/sqlite/include"
+
+For pkg-config to find sqlite you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/sqlite/lib/pkgconfig"
+
+==> Summary
+🍺  /Users/glencoakley/Cellar/sqlite/3.30.1: 11 files, 3.9MB
+==> Installing awscli dependency: python
+==> Downloading https://www.python.org/ftp/python/3.7.6/Python-3.7.6.tar.xz
+######################################################################## 100.0%
+==> ./configure --prefix=/Users/glencoakley/Cellar/python/3.7.6_1 --enable-ipv6 --datarootdir=/Users/glencoakley/Cellar/python/3.7.6_1/share --datadir=/Users/glencoakley/Cellar/python/3.
+==> make
+==> make install PYTHONAPPSDIR=/Users/glencoakley/Cellar/python/3.7.6_1
+==> make frameworkinstallextras PYTHONAPPSDIR=/Users/glencoakley/Cellar/python/3.7.6_1/share/python
+==> Downloading https://files.pythonhosted.org/packages/f7/b6/5b98441b6749ea1db1e41e5e6e7a93cbdd7ffd45e11fe1b22d45884bc777/setuptools-42.0.2.zip
+######################################################################## 100.0%
+==> Downloading https://files.pythonhosted.org/packages/ce/ea/9b445176a65ae4ba22dce1d93e4b5fe182f953df71a145f557cffaffc1bf/pip-19.3.1.tar.gz
+######################################################################## 100.0%
+==> Downloading https://files.pythonhosted.org/packages/59/b0/11710a598e1e148fb7cbf9220fd2a0b82c98e94efbdecb299cb25e7f0b39/wheel-0.33.6.tar.gz
+######################################################################## 100.0%
+Error: The `brew link` step did not complete successfully
+The formula built, but is not symlinked into /Users/glencoakley
+Could not symlink Frameworks/Python.framework/Headers
+Target /Users/glencoakley/Frameworks/Python.framework/Headers
+is a symlink belonging to python@2. You can unlink it:
+  brew unlink python@2
+
+To force the link and overwrite all conflicting files:
+  brew link --overwrite python
+
+To list all files that would be deleted:
+  brew link --overwrite --dry-run python
+
+Possible conflicting files are:
+/Users/glencoakley/Frameworks/Python.framework/Headers -> /Users/glencoakley/Cellar/python@2/2.7.16/Frameworks/Python.framework/Headers
+/Users/glencoakley/Frameworks/Python.framework/Python -> /Users/glencoakley/Cellar/python@2/2.7.16/Frameworks/Python.framework/Python
+/Users/glencoakley/Frameworks/Python.framework/Resources -> /Users/glencoakley/Cellar/python@2/2.7.16/Frameworks/Python.framework/Resources
+/Users/glencoakley/Frameworks/Python.framework/Versions/Current -> /Users/glencoakley/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/Current
+==> /Users/glencoakley/Cellar/python/3.7.6_1/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-scripts=/Users/glencoakley/Cellar/python/3.7.6_1/bin --install-lib=
+==> /Users/glencoakley/Cellar/python/3.7.6_1/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-scripts=/Users/glencoakley/Cellar/python/3.7.6_1/bin --install-lib=
+==> /Users/glencoakley/Cellar/python/3.7.6_1/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-scripts=/Users/glencoakley/Cellar/python/3.7.6_1/bin --install-lib=
+==> Caveats
+Python has been installed as
+  /Users/glencoakley/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /Users/glencoakley/opt/python/libexec/bin
+
+If you need Homebrew's Python 2.7 run
+  brew install python@2
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /Users/glencoakley/lib/python3.7/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+==> Summary
+🍺  /Users/glencoakley/Cellar/python/3.7.6_1: 8,585 files, 120.4MB, built in 2 minutes 26 seconds
+==> Installing awscli
+==> Downloading https://homebrew.bintray.com/bottles/awscli-1.16.310.mojave.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/27/272f7019bccef9d970bbcdc657ce1bb9a891ddc8afdc80a5c1d6487b464f8adc?__gda__=exp=1578346581~hmac=13882cfc8c5339f0bc80a958e30f615ab901422be4
+######################################################################## 100.0%
+==> Pouring awscli-1.16.310.mojave.bottle.tar.gz
+==> Caveats
+The "examples" directory has been installed to:
+  /Users/glencoakley/share/awscli/examples
+
+Bash completion has been installed to:
+  /Users/glencoakley/etc/bash_completion.d
+
+zsh completions and functions have been installed to:
+  /Users/glencoakley/share/zsh/site-functions
+==> Summary
+🍺  /Users/glencoakley/Cellar/awscli/1.16.310: 8,694 files, 59.8MB
+Removing: /Users/glencoakley/Cellar/awscli/1.16.210... (6,832 files, 56.8MB)
+==> Checking for dependents of upgraded formulae...
+==> No outdated dependents to upgrade!
+==> Checking for dependents of upgraded formulae...
+==> No broken dependents found!
+==> Caveats
+==> sqlite
+sqlite is keg-only, which means it was not symlinked into /Users/glencoakley,
+because macOS provides an older sqlite3.
+
+If you need to have sqlite first in your PATH run:
+  echo 'export PATH="/Users/glencoakley/opt/sqlite/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find sqlite you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/sqlite/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/sqlite/include"
+
+For pkg-config to find sqlite you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/sqlite/lib/pkgconfig"
+
+==> python
+Python has been installed as
+  /Users/glencoakley/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /Users/glencoakley/opt/python/libexec/bin
+
+If you need Homebrew's Python 2.7 run
+  brew install python@2
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /Users/glencoakley/lib/python3.7/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+==> awscli
+The "examples" directory has been installed to:
+  /Users/glencoakley/share/awscli/examples
+
+Bash completion has been installed to:
+  /Users/glencoakley/etc/bash_completion.d
+
+zsh completions and functions have been installed to:
+  /Users/glencoakley/share/zsh/site-functions
+

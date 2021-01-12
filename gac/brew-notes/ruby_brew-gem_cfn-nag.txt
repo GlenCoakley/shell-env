@@ -1,0 +1,140 @@
+==> Installing ruby dependency: openssl@1.1
+==> Downloading https://www.openssl.org/source/openssl-1.1.1d.tar.gz
+######################################################################## 100.0%
+==> perl ./Configure --prefix=/Users/glencoakley/Cellar/openssl@1.1/1.1.1d --openssldir=/Users/glenc
+==> make
+==> make test
+==> make install MANDIR=/Users/glencoakley/Cellar/openssl@1.1/1.1.1d/share/man MANSUFFIX=ssl
+==> Caveats
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /Users/glencoakley/etc/openssl@1.1/certs
+
+and run
+  /Users/glencoakley/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /Users/glencoakley,
+because openssl/libressl is provided by macOS so don't link an incompatible version.
+
+If you need to have openssl@1.1 first in your PATH run:
+  echo 'export PATH="/Users/glencoakley/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/openssl@1.1/include"
+
+For pkg-config to find openssl@1.1 you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/openssl@1.1/lib/pkgconfig"
+
+==> Summary
+🍺  /Users/glencoakley/Cellar/openssl@1.1/1.1.1d: 7,976 files, 17.9MB, built in 5 minutes 42 seconds
+==> Installing ruby dependency: readline
+==> Downloading https://homebrew.bintray.com/bottles/readline-8.0.1.mojave.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/3c/3c754391e9d243835811d128771ca0f1a565024100fd2c287
+######################################################################## 100.0%
+==> Pouring readline-8.0.1.mojave.bottle.tar.gz
+==> Caveats
+readline is keg-only, which means it was not symlinked into /Users/glencoakley,
+because macOS provides the BSD libedit library, which shadows libreadline.
+In order to prevent conflicts when programs look for libreadline we are
+defaulting this GNU Readline installation to keg-only.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/readline/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/readline/include"
+
+For pkg-config to find readline you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/readline/lib/pkgconfig"
+
+==> Summary
+🍺  /Users/glencoakley/Cellar/readline/8.0.1: 48 files, 1.5MB
+==> Installing ruby
+==> Downloading https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.xz
+######################################################################## 100.0%
+==> ./configure --prefix=/Users/glencoakley/Cellar/ruby/2.6.5 --enable-shared --disable-silent-rules
+==> make
+==> make install
+==> Downloading https://rubygems.org/rubygems/rubygems-3.0.6.tgz
+######################################################################## 100.0%
+==> /Users/glencoakley/Cellar/ruby/2.6.5/bin/ruby setup.rb --prefix=/private/tmp/ruby-20191217-90225
+==> Caveats
+By default, binaries installed by gem will be placed into:
+  /Users/glencoakley/lib/ruby/gems/2.6.0/bin
+
+You may want to add this to your PATH.
+
+ruby is keg-only, which means it was not symlinked into /Users/glencoakley,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have ruby first in your PATH run:
+  echo 'export PATH="/Users/glencoakley/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find ruby you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/ruby/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/ruby/include"
+
+For pkg-config to find ruby you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/ruby/lib/pkgconfig"
+
+==> Summary
+🍺  /Users/glencoakley/Cellar/ruby/2.6.5: 19,392 files, 31.2MB, built in 3 minutes 12 seconds
+==> Downloading https://github.com/sportngin/brew-gem/archive/v1.0.0.tar.gz
+==> Downloading from https://codeload.github.com/sportngin/brew-gem/tar.gz/v1.0.0
+######################################################################## 100.0%
+🍺  /Users/glencoakley/Cellar/brew-gem/1.0.0: 10 files, 14.6KB, built in 3 seconds
+==> Caveats
+==> openssl@1.1
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /Users/glencoakley/etc/openssl@1.1/certs
+
+and run
+  /Users/glencoakley/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /Users/glencoakley,
+because openssl/libressl is provided by macOS so don't link an incompatible version.
+
+If you need to have openssl@1.1 first in your PATH run:
+  echo 'export PATH="/Users/glencoakley/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/openssl@1.1/include"
+
+For pkg-config to find openssl@1.1 you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/openssl@1.1/lib/pkgconfig"
+
+==> readline
+readline is keg-only, which means it was not symlinked into /Users/glencoakley,
+because macOS provides the BSD libedit library, which shadows libreadline.
+In order to prevent conflicts when programs look for libreadline we are
+defaulting this GNU Readline installation to keg-only.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/readline/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/readline/include"
+
+For pkg-config to find readline you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/readline/lib/pkgconfig"
+
+==> ruby
+By default, binaries installed by gem will be placed into:
+  /Users/glencoakley/lib/ruby/gems/2.6.0/bin
+
+You may want to add this to your PATH.
+
+ruby is keg-only, which means it was not symlinked into /Users/glencoakley,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have ruby first in your PATH run:
+  echo 'export PATH="/Users/glencoakley/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find ruby you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/ruby/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/ruby/include"
+
+For pkg-config to find ruby you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/ruby/lib/pkgconfig"
+

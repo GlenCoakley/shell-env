@@ -1,0 +1,1 @@
+/Users/glencoakley/doc/brew_notes/awscli.txt

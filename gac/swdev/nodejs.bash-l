@@ -1,0 +1,14 @@
+#
+# Nodejs development
+#
+
+#----------------------------
+# Environment variables
+#----------------------------
+# Setting BROWSER stops Karma from complaining:
+#    browser_gpu_channel_host_factory.cc(121)] Failed to launch GPU process.
+export BROWSER=google-chrome
+export NPM_GCACHE="$GAC_DEV_DIR/runtime/npm_global"
+export PATH=$PATH:./node_modules/.bin:/dev/runtime/npm_cache
+
+source $GAC_CFG_DIR/swdev/npm-completion.bash-i
