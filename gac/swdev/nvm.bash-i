@@ -1,3 +1,5 @@
+# Glen> This has been tweaked from the original bash_completion script.
+# The original might work fine if placed in /usr/local/etc/bash_completion.d/
 
 export NVM_DIR="$HOME/dev/bin/nvm"
 export PATH=$PATH:$NVM_DIR/bin

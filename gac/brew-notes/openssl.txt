@@ -1,48 +1,59 @@
+==> Downloading https://homebrew.bintray.com/bottles/openssl%401.1-1.1.1i.mojave.bottle.tar.gz
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/e292d9b7a7ac0068d280a7c5df4e58f408f96d02e65cbf187a24d640db76e971--openssl@1.1-1.1.1i.mojave.bottle.tar.gz
+==> Reinstalling openssl@1.1 
+==> Pouring openssl@1.1-1.1.1i.mojave.bottle.tar.gz
 ==> Caveats
-==> openssl@1.1
 A CA file has been bootstrapped using certificates from the system
 keychain. To add additional certificates, place .pem files in
-  /Users/glencoakley/etc/openssl@1.1/certs
+  /usr/local/etc/openssl@1.1/certs
 
 and run
-  /Users/glencoakley/opt/openssl@1.1/bin/c_rehash
+  /usr/local/opt/openssl@1.1/bin/c_rehash
 
-openssl@1.1 is keg-only, which means it was not symlinked into /Users/glencoakley,
+openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
 because macOS provides LibreSSL.
 
 If you need to have openssl@1.1 first in your PATH run:
-  echo 'export PATH="/Users/glencoakley/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile
+  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> /Users/glencoakley/.bash_profile
 
 For compilers to find openssl@1.1 you may need to set:
-  export LDFLAGS="-L/Users/glencoakley/opt/openssl@1.1/lib"
-  export CPPFLAGS="-I/Users/glencoakley/opt/openssl@1.1/include"
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
 For pkg-config to find openssl@1.1 you may need to set:
-  export PKG_CONFIG_PATH="/Users/glencoakley/opt/openssl@1.1/lib/pkgconfig"
+  export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
-==> readline
-readline is keg-only, which means it was not symlinked into /Users/glencoakley,
-because macOS provides BSD libedit.
-
-For compilers to find readline you may need to set:
-  export LDFLAGS="-L/Users/glencoakley/opt/readline/lib"
-  export CPPFLAGS="-I/Users/glencoakley/opt/readline/include"
-
-For pkg-config to find readline you may need to set:
-  export PKG_CONFIG_PATH="/Users/glencoakley/opt/readline/lib/pkgconfig"
-
-==> python
+==> Summary
+🍺  /usr/local/Cellar/openssl@1.1/1.1.1i: 8,067 files, 18.4MB
+==> No outdated dependents to upgrade!
+==> Checking for dependents of upgraded formulae...
+==> Reinstalling 20 broken dependents from source:
+cairo, glib, gdk-pixbuf, gnupg, gnutls, gobject-introspection, gts, harfbuzz, graphviz, libheif, liblqr, imagemagick, librsvg, libxmlsec1, oath-toolkit, pango, python@3.8, ruby, wget, yamllint
+==> Downloading https://homebrew.bintray.com/bottles/python%403.9-3.9.1_6.mojave.bottle.tar.gz
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/c871459945f33ac181caccdc5fb0f4fc54d074f0474fcd37aea7039ed5b997c0--python@3.9-3.9.1_6.mojave.bottle.tar.gz
+==> Downloading https://gitlab.freedesktop.org/cairo/cairo/-/commit/e22d7212acb454daccc088619ee147af03883974.patch
+==> Downloading https://cairographics.org/releases/cairo-1.16.0.tar.xz
+==> Reinstalling cairo 
+==> Installing dependencies for cairo: python@3.9
+==> Installing cairo dependency: python@3.9
+==> Pouring python@3.9-3.9.1_6.mojave.bottle.tar.gz
+==> /usr/local/Cellar/python@3.9/3.9.1_6/bin/python3 -m ensurepip
+==> /usr/local/Cellar/python@3.9/3.9.1_6/bin/pip3 install -v --global-option=--no-user-cfg --install-option=--force --install-option=--single-version-externally-managed --install-option=--record=installed.txt --upgrade --target=/usr/local/lib/python3.9/site-packages /usr/local/Cellar/python@3.9/3.9.1_6/libexec/setuptools /usr/local/Cellar/python@3.9/3.9.1_6/libexec/pip /usr/local/Cellar/python@3.9/3.9.1_6/libexec/wheel
+==> /usr/local/Cellar/python@3.9/3.9.1_6/bin/pip3 wheel --wheel-dir=/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ensurepip/_bundled /usr/local/Cellar/python@3.9/3.9.1_6/libexec/setuptools /usr/local/Cellar/python@3.9/3.9.1_6/libexec/pip
+==> Caveats
 Python has been installed as
-  /Users/glencoakley/bin/python3
+  /usr/local/bin/python3
 
 Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
 `python3`, `python3-config`, `pip3` etc., respectively, have been installed into
-  /Users/glencoakley/opt/python/libexec/bin
+  /usr/local/opt/python@3.9/libexec/bin
 
 You can install Python packages with
   pip3 install <package>
 They will install into the site-package directory
-  /Users/glencoakley/lib/python3.7/site-packages
+  /usr/local/lib/python3.9/site-packages
 
 See: https://docs.brew.sh/Homebrew-and-Python
-
+==> Summary
+🍺  /usr/local/Cellar/python@3.9/3.9.1_6: 3,932 files, 62.8MB
+==> Installing cairo

@@ -1,0 +1,48 @@
+==> Caveats
+==> openssl@1.1
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /Users/glencoakley/etc/openssl@1.1/certs
+
+and run
+  /Users/glencoakley/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /Users/glencoakley,
+because macOS provides LibreSSL.
+
+If you need to have openssl@1.1 first in your PATH run:
+  echo 'export PATH="/Users/glencoakley/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/openssl@1.1/include"
+
+For pkg-config to find openssl@1.1 you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/openssl@1.1/lib/pkgconfig"
+
+==> readline
+readline is keg-only, which means it was not symlinked into /Users/glencoakley,
+because macOS provides BSD libedit.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/Users/glencoakley/opt/readline/lib"
+  export CPPFLAGS="-I/Users/glencoakley/opt/readline/include"
+
+For pkg-config to find readline you may need to set:
+  export PKG_CONFIG_PATH="/Users/glencoakley/opt/readline/lib/pkgconfig"
+
+==> python
+Python has been installed as
+  /Users/glencoakley/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /Users/glencoakley/opt/python/libexec/bin
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /Users/glencoakley/lib/python3.7/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+

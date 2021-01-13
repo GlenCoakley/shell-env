@@ -1,0 +1,16 @@
+==> Downloading https://homebrew.bintray.com/bottles/fontconfig-2.13.1.mojave.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/1c704a5a4249252bf42dc4f2a458f911a7858a931858ad257d9ec39978ca5095?response-content-disposition=attachment%3Bfilename%3D%22fontconfig-2.13.1.mojave.bottle.tar.gz%22&Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHAqOi8vZDI5dnprNG93MDd3aTcuY2xvdWRmcm9udC5uZXQvMWM3MDRhNWE0MjQ5MjUyYmY0MmRjNGYyYTQ1OGY5MTFhNzg1OGE5MzE4NThhZDI1N2Q5ZWMzOTk3OGNhNTA5NT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWF0dGFjaG1lbnQlM0JmaWxlbmFtZSUzRCUyMmZvbnRjb25maWctMi4xMy4xLm1vamF2ZS5ib3R0bGUudGFyLmd6JTIyIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjEwNDk1MTcxfSwiSXBBZGRyZXNzIjp7IkFXUzpTb3VyY2VJcCI6IjAuMC4wLjAvMCJ9fX1dfQ__&Signature=o0Y2zjbJaBnMz-UzDFMsqXEt2GKVWXcnbdpzSol8L~5cQRTXXTQAGf~2xy3zKx9fy~o4dcP0YIVE-pzfJDrSZIHnrcu-2WkW1qOU8SmiWnlS43fcUJXW4rn2xn4kTnS8J6pF~wYeH~P3KNMqkPYmabqZqCDCRhaTGkHXAyQTp8fvqH1naX8cM7vKxvRriDTZaJHMjvYi8fxJmrhYfCU9CjaKEvVna0Xrb7xy9PDvsQMThM~0Zng~2DqJhdiiaXF0oB2PVoWwGn87vnYmXhsXTDouZrsNKwtbNB6wWB9~JTJQIIL26YShNcApi51MrLYJr2LuQCVdZA7S0lRvwsxxvg__&Key-Pair-Id=APKAIFKFWOMXM2UMTSFA
+==> Reinstalling fontconfig 
+==> Pouring fontconfig-2.13.1.mojave.bottle.tar.gz
+==> Regenerating font cache, this may take a while
+==> /usr/local/Cellar/fontconfig/2.13.1/bin/fc-cache -frv
+🍺  /usr/local/Cellar/fontconfig/2.13.1: 531 files, 3.3MB
+==> No outdated dependents to upgrade!
+==> Checking for dependents of upgraded formulae...
+==> Reinstalling 6 broken dependents from source:
+cairo, gobject-introspection, graphviz, harfbuzz, librsvg, pango
+==> Downloading https://gitlab.freedesktop.org/cairo/cairo/-/commit/e22d7212acb454daccc088619ee147af03883974.patch
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/74f48741689959dd13463a16a8636ed3a3bc7f4dd16ab62dcf982bbed279e3c9--e22d7212acb454daccc088619ee147af03883974.patch
+==> Downloading https://cairographics.org/releases/cairo-1.16.0.tar.xz
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/a677888d5e177a7467f58ddcb082551cf57ed941092151c21891a4052596b8e4--cairo-1.16.0.tar.xz
+==> Reinstalling cairo 

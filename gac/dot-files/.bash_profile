@@ -9,5 +9,4 @@ source $GAC_CFG_DIR/swdev/nvm.bash # so IntelliJ > External Tools can find node.
 export SDKMAN_DIR="/Users/glencoakley/dev/bin/sdkman"
 [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
-
 export PATH="~/bin/cargo/bin:~/Library/Python/3.8/bin:$PATH"

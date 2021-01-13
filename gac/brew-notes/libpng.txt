@@ -1,0 +1,14 @@
+==> Downloading https://homebrew.bintray.com/bottles/libpng-1.6.37.mojave.bottle.tar.gz
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/1957fe4350dafd271e0a5ae9ac4c9e3583520b3b77111f873366c8a21f2e9703--libpng-1.6.37.mojave.bottle.tar.gz
+==> Reinstalling libpng 
+==> Pouring libpng-1.6.37.mojave.bottle.tar.gz
+🍺  /usr/local/Cellar/libpng/1.6.37: 27 files, 1.2MB
+==> No outdated dependents to upgrade!
+==> Checking for dependents of upgraded formulae...
+==> Reinstalling 11 broken dependents from source:
+cairo, gdk-pixbuf, gobject-introspection, graphicsmagick, graphviz, gts, harfbuzz, imagemagick, libheif, pango, librsvg
+==> Downloading https://gitlab.freedesktop.org/cairo/cairo/-/commit/e22d7212acb454daccc088619ee147af03883974.patch
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/74f48741689959dd13463a16a8636ed3a3bc7f4dd16ab62dcf982bbed279e3c9--e22d7212acb454daccc088619ee147af03883974.patch
+==> Downloading https://cairographics.org/releases/cairo-1.16.0.tar.xz
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/a677888d5e177a7467f58ddcb082551cf57ed941092151c21891a4052596b8e4--cairo-1.16.0.tar.xz
+==> Reinstalling cairo 

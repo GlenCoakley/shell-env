@@ -1,0 +1,20 @@
+==> Downloading https://homebrew.bintray.com/bottles/gettext-0.21.mojave.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/99707d4dcc731faf980333365a694e9500f2f012f84c0bcb6d8cb5d620c2ce08?response-content-disposition=attachment%3Bfilename%3D%22gettext-0.21.mojave.bottle.tar.gz%22&Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHAqOi8vZDI5dnprNG93MDd3aTcuY2xvdWRmcm9udC5uZXQvOTk3MDdkNGRjYzczMWZhZjk4MDMzMzM2NWE2OTRlOTUwMGYyZjAxMmY4NGMwYmNiNmQ4Y2I1ZDYyMGMyY2UwOD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWF0dGFjaG1lbnQlM0JmaWxlbmFtZSUzRCUyMmdldHRleHQtMC4yMS5tb2phdmUuYm90dGxlLnRhci5neiUyMiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTYxMDU0NzMyMX0sIklwQWRkcmVzcyI6eyJBV1M6U291cmNlSXAiOiIwLjAuMC4wLzAifX19XX0_&Signature=Ggn2NdmstL-ytGQ0D7IesEzWnK89Tgee9WkxuYZloGUrorbARXOKnWHxFWWmlQzfI5N1Rq9oznQ67D76Gy6byvyx0iy3tXMfkjW6mrDvfDdvZMOlAd-3OwZ8UGSQHwWgKNpjsuMzbXEJm70dPzaBft2rFY8ftDGJxlnOe30p-g6pJjWlu9Y6Uvtx-nAwPiFX2x90WlnsuwyX75Zx0YFQ3yyxwREltxi30oD9nFz-8kf9sO~fuTWQv2q42AKeFesm-s~iRZx2MRKdfuMY4xpVgUwLs4flQIS5WpD3nJqCSdUMUrhQUwTgNxgt6aiKsIraLOYUnixiYtJk2ZG5QnYPiQ__&Key-Pair-Id=APKAIFKFWOMXM2UMTSFA
+==> Reinstalling gettext 
+==> Pouring gettext-0.21.mojave.bottle.tar.gz
+==> Caveats
+Emacs Lisp files have been installed to:
+  /usr/local/share/emacs/site-lisp/gettext
+==> Summary
+🍺  /usr/local/Cellar/gettext/0.21: 1,959 files, 19MB
+==> No outdated dependents to upgrade!
+==> Checking for dependents of upgraded formulae...
+==> Reinstalling 16 broken dependents from source:
+glib, cairo, gdk-pixbuf, gnutls, gnupg, gobject-introspection, gts, harfbuzz, graphviz, libheif, liblqr, imagemagick, libxmlsec1, oath-toolkit, pango, wget
+==> Downloading https://raw.githubusercontent.com/Homebrew/formula-patches/6164294a75541c278f3863b111791376caa3ad26/glib/hardcoded-paths.diff
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/54f3f612bdfc9bfc09633176c7673816fe2a2188e470bf48d60d826bdf6bf21a--hardcoded-paths.diff
+==> Downloading https://gitlab.gnome.org/GNOME/glib/-/commit/8c76bec77985be7f4c81a052ec649232341369f6.patch
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/35a1699f38bd2fa5b2d29e231497620127eccf5a6d1ace3635bf273d64d0f8b2--8c76bec77985be7f4c81a052ec649232341369f6.patch
+==> Downloading https://download.gnome.org/sources/glib/2.66/glib-2.66.4.tar.xz
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/2b3d2b04ccb667cca7a8e5214af568152e5cd5a75c4769df59e779339a544bdd--glib-2.66.4.tar.xz
+==> Reinstalling glib 

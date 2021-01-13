@@ -1,0 +1,182 @@
+Please note that these warnings are just used to help the Homebrew maintainers
+with debugging if you file an issue. If everything you use Homebrew for is
+working fine: please don't worry or file an issue; just ignore this. Thanks!
+
+Warning: A newer Command Line Tools release is available.
+Update them from Software Update in System Preferences or run:
+  softwareupdate --all --install --force
+
+If that doesn't show you an update run:
+  sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
+
+Alternatively, manually download them from:
+  https://developer.apple.com/download/more/.
+
+
+Warning: Some installed kegs have no formulae!
+This means they were either deleted or installed with `brew diy`.
+You should find replacements for the following formulae:
+  python@2
+  gem-cfn-nag
+
+Warning: Some installed formulae are deprecated or disabled.
+You should find replacements for the following formulae:
+  lua@5.1
+
+Warning: "config" scripts exist outside your system or Homebrew directories.
+`./configure` scripts often look for *-config scripts to determine if
+software packages are installed, and which additional flags to use when
+compiling and linking.
+
+Having additional scripts in your path can confuse software installed via
+Homebrew if the config script overrides a system or Homebrew-provided
+script of the same name. We found the following "config" scripts:
+  /Users/glencoakley/scripts/drc/aws-env-to-debug-config
+  /Users/glencoakley/scripts/drc/get-iat-config
+  /Users/glencoakley/scripts/git-config
+  /Users/glencoakley/bin/pkg-config
+  /Users/glencoakley/bin/jemalloc-config
+  /Users/glencoakley/bin/MagickCore-config
+  /Users/glencoakley/bin/MagickWand-config
+  /Users/glencoakley/bin/python2-config
+  /Users/glencoakley/bin/GraphicsMagickWand-config
+  /Users/glencoakley/bin/xmlsec1-config
+  /Users/glencoakley/bin/freetype-config
+  /Users/glencoakley/bin/libpng16-config
+  /Users/glencoakley/bin/python2.7-config
+  /Users/glencoakley/bin/Magick++-config
+  /Users/glencoakley/bin/libpng-config
+  /Users/glencoakley/bin/gpgrt-config
+  /Users/glencoakley/bin/python3.9-config
+  /Users/glencoakley/bin/onig-config
+  /Users/glencoakley/bin/ksba-config
+  /Users/glencoakley/bin/python-config
+  /Users/glencoakley/bin/python3-config
+  /Users/glencoakley/bin/npth-config
+  /Users/glencoakley/bin/libassuan-config
+  /Users/glencoakley/bin/GraphicsMagick-config
+  /Users/glencoakley/bin/pcre2-config
+  /Users/glencoakley/bin/gpg-error-config
+  /Users/glencoakley/bin/GraphicsMagick++-config
+  /Users/glencoakley/bin/pcre-config
+  /Users/glencoakley/bin/gts-config
+  /Users/glencoakley/bin/libgcrypt-config
+  /Users/glencoakley/bin/guile-config
+
+Warning: Unbrewed dylibs were found in /usr/local/lib.
+If you didn't put them there on purpose they could cause problems when
+building Homebrew formulae, and may need to be deleted.
+
+Unexpected dylibs:
+  /usr/local/lib/libtesseract.3.dylib
+
+Warning: Unbrewed header files were found in /usr/local/include.
+If you didn't put them there on purpose they could cause problems when
+building Homebrew formulae, and may need to be deleted.
+
+Unexpected header files:
+  /usr/local/include/tesseract/apitypes.h
+  /usr/local/include/tesseract/baseapi.h
+  /usr/local/include/tesseract/basedir.h
+  /usr/local/include/tesseract/capi.h
+  /usr/local/include/tesseract/errcode.h
+  /usr/local/include/tesseract/fileerr.h
+  /usr/local/include/tesseract/genericvector.h
+  /usr/local/include/tesseract/helpers.h
+  /usr/local/include/tesseract/host.h
+  /usr/local/include/tesseract/ltrresultiterator.h
+  /usr/local/include/tesseract/memry.h
+  /usr/local/include/tesseract/ndminx.h
+  /usr/local/include/tesseract/ocrclass.h
+  /usr/local/include/tesseract/osdetect.h
+  /usr/local/include/tesseract/pageiterator.h
+  /usr/local/include/tesseract/params.h
+  /usr/local/include/tesseract/platform.h
+  /usr/local/include/tesseract/publictypes.h
+  /usr/local/include/tesseract/renderer.h
+  /usr/local/include/tesseract/resultiterator.h
+  /usr/local/include/tesseract/serialis.h
+  /usr/local/include/tesseract/strngs.h
+  /usr/local/include/tesseract/tesscallback.h
+  /usr/local/include/tesseract/thresholder.h
+  /usr/local/include/tesseract/unichar.h
+  /usr/local/include/tesseract/unicharmap.h
+  /usr/local/include/tesseract/unicharset.h
+
+Warning: Unbrewed .la files were found in /usr/local/lib.
+If you didn't put them there on purpose they could cause problems when
+building Homebrew formulae, and may need to be deleted.
+
+Unexpected .la files:
+  /usr/local/lib/libtesseract.la
+
+Warning: Unbrewed .pc files were found in /usr/local/lib/pkgconfig.
+If you didn't put them there on purpose they could cause problems when
+building Homebrew formulae, and may need to be deleted.
+
+Unexpected .pc files:
+  /usr/local/lib/pkgconfig/tesseract.pc
+
+Warning: Unbrewed static libraries were found in /usr/local/lib.
+If you didn't put them there on purpose they could cause problems when
+building Homebrew formulae, and may need to be deleted.
+
+Unexpected static libraries:
+  /usr/local/lib/libtesseract.a
+
+Warning: You have unlinked kegs in your Cellar.
+Leaving kegs unlinked can lead to build-trouble and cause brews that depend on
+those kegs to fail to run properly once built. Run `brew link` on these:
+  libtiff
+  gmp
+  pinentry
+  libidn2
+  libksba
+  nghttp2
+  python@2
+  little-cms2
+  go
+  pixman
+  gdbm
+  mpfr
+  gts
+  libunistring
+  liblqr
+  openjpeg
+  libyaml
+  xmlto
+  jemalloc
+  lua@5.1
+  netpbm
+  libde265
+  nasm
+  graphite2
+  libassuan
+  tesseract
+  c-ares
+  fribidi
+  xz
+  giflib
+  docbook-xsl
+  gnu-sed
+  libtasn1
+  oniguruma
+  libevent
+  pcre
+  docbook
+  node
+  libomp
+  unbound
+  gem-cfn-nag
+  jpeg
+  p11-kit
+  libev
+  lzo
+  libatomic_ops
+  libmpc
+  npth
+  adns
+
+Warning: Broken symlinks were found. Remove them with `brew cleanup`:
+  /usr/local/bin/base64

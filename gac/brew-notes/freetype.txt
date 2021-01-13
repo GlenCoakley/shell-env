@@ -1,0 +1,14 @@
+==> Downloading https://homebrew.bintray.com/bottles/freetype-2.10.4.mojave.bottle.tar.gz
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/e2fd5f44c652e4b039a0d80ccaa9eb9b83953cd5d4833788feccdda1789ccfb6--freetype-2.10.4.mojave.bottle.tar.gz
+==> Reinstalling freetype 
+==> Pouring freetype-2.10.4.mojave.bottle.tar.gz
+🍺  /usr/local/Cellar/freetype/2.10.4: 64 files, 2.3MB
+==> No outdated dependents to upgrade!
+==> Checking for dependents of upgraded formulae...
+==> Reinstalling 8 broken dependents from source:
+cairo, gobject-introspection, graphicsmagick, harfbuzz, graphviz, imagemagick, pango, librsvg
+==> Downloading https://gitlab.freedesktop.org/cairo/cairo/-/commit/e22d7212acb454daccc088619ee147af03883974.patch
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/74f48741689959dd13463a16a8636ed3a3bc7f4dd16ab62dcf982bbed279e3c9--e22d7212acb454daccc088619ee147af03883974.patch
+==> Downloading https://cairographics.org/releases/cairo-1.16.0.tar.xz
+Already downloaded: /Users/glencoakley/Library/Caches/Homebrew/downloads/a677888d5e177a7467f58ddcb082551cf57ed941092151c21891a4052596b8e4--cairo-1.16.0.tar.xz
+==> Reinstalling cairo 

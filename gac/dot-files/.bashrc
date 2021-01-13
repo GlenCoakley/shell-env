@@ -12,7 +12,4 @@
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /Users/glencoakley/dev/drc/wksp/lrc/form-rec-svc/node_modules/tabtab/.completions/sls.bash ] && . /Users/glencoakley/dev/drc/wksp/lrc/form-rec-svc/node_modules/tabtab/.completions/sls.bash
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /Users/glencoakley/dev/drc/wksp/lrc/form-rec-svc/node_modules/tabtab/.completions/slss.bash ] && . /Users/glencoakley/dev/drc/wksp/lrc/form-rec-svc/node_modules/tabtab/.completions/slss.bash
 

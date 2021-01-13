@@ -1,0 +1,9 @@
+==> Auto-updated Homebrew!
+Updated 3 taps (homebrew/cask-versions, homebrew/core and homebrew/cask).
+==> Updated Formulae
+Updated 33 formulae.
+==> New Casks
+twobird
+==> Updated Casks
+Updated 22 casks.
+

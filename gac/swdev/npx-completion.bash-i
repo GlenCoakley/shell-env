@@ -1,3 +1,4 @@
+# Glen> This has been tweaked from the original bash_completion script for speed. 
 
 # Shell tab-completion handler. Modified from dflt_completion_handler_for_npx.bash
 
